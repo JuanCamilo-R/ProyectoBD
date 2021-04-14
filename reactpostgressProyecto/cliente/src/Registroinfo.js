@@ -5,6 +5,7 @@ export const Registroinfo = () => {
 
   const [documento, setDocumento] = useState('')
   const [nombre, setNombre] = useState('')
+  const[cedula, setCedula] = useState('')
   const [apellido, setApellido] = useState('')
 
 
@@ -40,16 +41,8 @@ export const Registroinfo = () => {
         <div  className="formdb__box-containter">
             <h3 className="auth__title">Envio INFO</h3>
             <form>
-               <input 
-                className="auth__input"
-                type="text"
-                placeholder="documento"
-                name="documento"
-                value={documento}
-                autoComplete="off"
-                onChange={onChangedc}
-                />
-            
+               <label for = "cedula">Cedula</label>
+               <input type = "text" id="cedula" name="cedula" value = {cedula}></input>
 
             <input 
                 className="auth__input"
