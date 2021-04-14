@@ -41,8 +41,12 @@ export const Registroinfo = () => {
         <div  className="formdb__box-containter">
             <h3 className="auth__title">Envio INFO</h3>
             <form>
-               <label for = "cedula">Cedula</label>
-               <input type = "text" id="cedula" name="cedula" value = {cedula}></input>
+               <label for = "cedula"> Cedula </label><br></br>
+               <input type = "text" id="cedula" name="cedula" value = {cedula}
+               autoComplete = "off" placeHolder="cedula"
+               onChange={onChangenm}
+               />
+              <br></br>
 
             <input 
                 className="auth__input"
