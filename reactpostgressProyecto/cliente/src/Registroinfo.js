@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
-
+import ReactDOM from 'react-dom';
 import axios from 'axios'
+import Badge from './components/Badge.js'
 export const Registroinfo = () => {
 
   const [documento, setDocumento] = useState('')
@@ -37,36 +38,25 @@ export const Registroinfo = () => {
         console.log('Se hizo click');
          guardabase()
       }
+
+      const container = document.getElementById('root');
+      
     return (
+      ReactDOM.render(<Badge/>, container)
+      /*
         <div  className="formdb__box-containter">
             <h3 className="auth__title">Envio INFO</h3>
             <form>
                <label for = "cedula"> Cedula </label><br></br>
-               <input type = "text" id="cedula" name="cedula" value = {cedula}
+               <input className ="auth__input" type = "text" id="cedula" name="cedula" value = {cedula}
                autoComplete = "off" placeHolder="cedula"
                onChange={onChangenm}
-               />
+               ></input>
               <br></br>
-
-            <input 
-                className="auth__input"
-                type="text"
-                placeholder="nombre"
-                name="nombre"
-                value={nombre}
-                autoComplete="off"
-                onChange={onChangenm}
-                />
-               <input 
-                className="auth__input"
-                type="text"
-                placeholder="apellido"
-                name="apellido"
-                value={apellido}
-                onChange={onChangeap}
-                autoComplete="off"
-                />
-
+              <label for = "Nombre"> Nombre</label> <br></br>
+              <input className = "auth__input" type = "text" id = "nombre" value = {nombre} autoComplete = "off" placeholder = "nombre"
+              onChange={onChangenm}></input>
+              <input></input>
                 
                 
                 <button
@@ -78,5 +68,8 @@ export const Registroinfo = () => {
                 </button>    
             </form>
         </div>
+        */
     )
+    
+    
 }
