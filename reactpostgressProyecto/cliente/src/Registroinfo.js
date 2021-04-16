@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import ReactDOM from 'react-dom';
 import axios from 'axios'
-import Badge from './components/Badge.js'
+import App from './components/App';
+import Badge from './components/Badge';
 export const Registroinfo = () => {
 
   const [documento, setDocumento] = useState('')
@@ -42,7 +43,7 @@ export const Registroinfo = () => {
       const container = document.getElementById('root');
       
     return (
-      ReactDOM.render(<Badge/>, container)
+      ReactDOM.render(<App/>, container)
       /*
         <div  className="formdb__box-containter">
             <h3 className="auth__title">Envio INFO</h3>
