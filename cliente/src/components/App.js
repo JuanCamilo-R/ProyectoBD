@@ -8,7 +8,7 @@ function App(){
     return (
         <BrowserRouter>
             <Switch>
-            <Route exact path = "/badge" component= {Badge}/>
+            <Route exact path = "/" component= {Badge}/>
             <Route exact path = "/form" component= {Form}/>
             </Switch>
         </BrowserRouter>
