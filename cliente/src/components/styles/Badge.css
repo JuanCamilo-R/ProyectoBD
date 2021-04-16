@@ -4,6 +4,13 @@
 
 }
 
+.App {
+    width: 50%;
+    margin: 10rem auto;
+    text-align: center;
+    height: 570px;    
+}
+
 .buttonContainer{
     height:100vh;
     justify-content: center;
