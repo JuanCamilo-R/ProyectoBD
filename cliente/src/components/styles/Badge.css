@@ -1,7 +1,8 @@
 
 
+
 .container{
-    border:1px solid black;
+    border:1px solid rgb(255, 255, 255);
     
 
 }
@@ -10,27 +11,36 @@
     position: center;
     margin: auto;
   width: 50%;
-  border: 3px solid green;
+  border: 3px solid rgb(0, 0, 0);
   border-radius: 12px;
   padding: 10px;
     border: 1px solid #a9a8c2;
-    background: green;
+    background: rgb(249, 255, 197);
     height: 100px;
 }
 /* border-radius: 50%;   b*/
 .badge3 {
     width: 230px;
-    border: 3px solid chocolate;
+    border: 3px solid rgb(255, 247, 179);
     border-radius: 12px;
-    background: green;
+    background: rgb(249, 255, 197);
     height: 135px;
 }
 
 .badge {
-    background: #000000;
+    background: rgb(249, 255, 197);
     width: 1364px;
     height: 536px;
 }
+
+.BadgeNew__hero {
+    width: 100%;
+    padding: 2rem 0;
+    background: url('../../images/stars.svg'), #1B1B25;
+    background-repeat: repeat;
+    margin-bottom: 1rem;
+    color: #ffffff;
+  }
 
 /*
 .badge {
@@ -106,14 +116,12 @@
     line-height: 5px;
     text-align: left;
     
-    color: #FFFFFF;  
+    color: #000000;  
 }
 
 .texto3{ 
     white-space: pre;
-  
 
-    
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -121,7 +129,7 @@
     line-height: 5px;
     text-align: left;
     
-    color: #FFFFFF;  
+    color: #000000;  
 }
 
 .texto{ 
@@ -133,26 +141,33 @@
     line-height: 5px;
 
     
-    color: #FFFFFF;
+    color: #000000;
    
 }
 
 .formButton{
-    
+    align-items: center;
+    position: center;
     display: inline-block;
-    border: 3px solid green;
+    border: 3px solid rgb(198, 243, 173);
     border-radius: 12px;
-    background-color: green;
-    border: none;
-    color: white;
+    background-color: rgb(198, 243, 173);
+    color: rgb(0, 0, 0);
     text-align: center;
     text-decoration:  none;
     padding: 15px 32px;
     font-size:  16px;
     
 }
+
+.button{
+    align-items: center;
+    margin: auto;
+    width: 17%;
+    padding: 10px;
+}
 /* Poner aquí el diseño del botón al pasar por encima con el mouse*/
 .formButton:hover {
     text-decoration: none;
-    color:white;
+    color:rgb(151, 52, 52);
 }

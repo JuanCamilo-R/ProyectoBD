@@ -12,14 +12,16 @@ import '../../node_modules/bootstrap/dist/js/bootstrap.min.js';
 
 //Images
 import logo_bichoclo from '../images/LOGO-BICHOCLO.png';
+import lfon from '../images/fondo.jpg';
+
 class Badge extends React.Component {
     render() {
         return (
             <div >
                 <Navbar/>
-                <div className="badge">
+                <div className="BadgeNew__hero ">
+                    
                     <div className="lema">
-                        #Hola
                         <div className="badge3">
                         <p className="texto3"> </p> 
                         <p className="texto3">Organizadores:</p>
@@ -38,7 +40,7 @@ class Badge extends React.Component {
                         </div>
                     </div>
 
-                    <div >
+                    <div className = "button">
                                 <Link to="/Form" className="formButton">Llena el form, rey</Link>
                     </div>
                     <div >
