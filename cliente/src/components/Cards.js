@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactCardCarousel from 'react-card-carousel';
 import { useState } from 'react';
-import Slider from 'react-slick';
+
 class Card extends React.Component{
     static get CONTAINER_STYLE(){
         return {
