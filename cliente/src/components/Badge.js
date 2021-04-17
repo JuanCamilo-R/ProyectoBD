@@ -11,7 +11,7 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'; // Archivo CSS
 import '../../node_modules/bootstrap/dist/js/bootstrap.min.js';
 
 //Images
-import logo_bichoclo from '../images/logo_prueba.png';
+import logo_bichoclo from '../images/LOGO-BICHOCLO.png';
 class Badge extends React.Component {
     render() {
         return (
