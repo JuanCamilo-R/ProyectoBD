@@ -1,10 +1,29 @@
 
 
+.Form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: blue;
+    background: #C6FFDD;  /* fallback for old browsers */
+    /*background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */ 
+    background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-.container{
-    border:1px solid rgb(255, 255, 255);
-    
+}
 
+.form-container{
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px 80px;
+    max-width: 800px;
+    margin: 0 auto;
+    /*box-shadow: 0 15px 16px .17px rgba(0,0,0,0.05);*/
+}
+
+.h1{
+    text-align: center;
 }
 /*700*/
 .badge2 {
