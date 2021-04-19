@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch ,Route } from 'react-router-dom';
 import Badge from './Badge';
-import Form from './Form';
+import Forms from './Form';
 
 function App(){
 
@@ -9,7 +9,7 @@ function App(){
         <BrowserRouter>
             <Switch>
             <Route exact path = "/" component= {Badge}/>
-            <Route exact path = "/form" component= {Form}/>
+            <Route exact path = "/form" component= {Forms}/>
             </Switch>
         </BrowserRouter>
     );

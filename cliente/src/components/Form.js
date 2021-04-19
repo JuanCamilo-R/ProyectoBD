@@ -4,16 +4,17 @@ import Button from 'react-bootstrap/Button'
 import ReactDOM from "react-dom";
 import Card from './Cards';
 import logo from '../images/choclitos.jpg';
-class Form extends React.Component{
+import Form from 'react-bootstrap/Form'
+class Forms extends React.Component{
 
 render(){
 
     return  (
-        <Card/>
+        <div></div>
     )
     
 }
 
 }
 
-export default Form;
+export default Forms;
