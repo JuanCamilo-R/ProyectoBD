@@ -3,6 +3,7 @@ import ReactCardCarousel from 'react-card-carousel';
 import { useState } from 'react';
 
 class Card extends React.Component{
+    
     static get CONTAINER_STYLE(){
         return {
             position: "relative",
