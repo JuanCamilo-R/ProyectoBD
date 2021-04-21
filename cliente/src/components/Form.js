@@ -9,7 +9,12 @@ class Form extends React.Component{
 render(){
 
     return  (
-        <Card/>
+        <div className = "Form">
+            <div className = "container">
+            <Card/>
+            </div>
+        </div>
+        
     )
     
 }
