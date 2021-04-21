@@ -9,54 +9,82 @@ import _default from 'react-bootstrap/esm/CardColumns';
 import Navbar from '../components/Navbar'
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'; // Archivo CSS de Bootstrap 4 
 import '../../node_modules/bootstrap/dist/js/bootstrap.min.js';
+import Card from 'react-bootstrap/Card'
 
 //Images
 import logo_bichoclo from '../images/LOGO-BICHOCLO.png';
 import lfon from '../images/fondo.jpg';
-
+import { Container, Row, Col } from 'react-bootstrap';
 class Badge extends React.Component {
     render() {
         return (
             <div >
-                <Navbar/>
-                <div className="BadgeNew__hero ">
-                    
-                    <div className="lema">
-                        <div className="badge3">
-                        <p className="texto3"> </p> 
-                        <p className="texto3">Organizadores:</p>
-                            <p className="texto2">Juan Camilo Randazzo</p>
-                            <p className="texto2">Jose David Barona</p>
-                            <p className="texto2">Andres Rincon</p>
-                            <p className="texto2">Jennyfer Belalcazar</p>
-                            <p className="texto3"> </p> 
-                        </div>
+                <Navbar />
+                <Container>
+                    <div className="BadgeNew__hero ">
+                        <Row>
+                            <Col sm={12}>
+                                <div className="lema">
+                                    <div className="badge3">
+                                        <p className="texto3"> </p>
+                                        <p className="texto3">Organizadores:</p>
+                                        <p className="texto2">Juan Camilo Randazzo</p>
+                                        <p className="texto2">Jose David Barona</p>
+                                        <p className="texto2">Andres Rincon</p>
+                                        <p className="texto2">Jennyfer Belalcazar</p>
+                                        <p className="texto3"> </p>
+                                    </div>
+
+                                </div>
+                            </Col>
+                        </Row>
+                        <Row className="justify-content-center">
+                            <Col md="auto">
+
+                                <div className="logoContainer2">
+                                    <img className="logoStyles center" src={logo_bichoclo}></img>
+
+
+                                </div>
+                            </Col>
+                        </Row>
+
+                        <Row>
+                            <Col sm={12} className="text-center">
+                                <div className="button">
+                                    <Link to="/Form">< Button variant="warning">Llena el form, rey</Button></Link>
+                                </div>
+                            </Col>
+                        </Row>
+
+
+                        <Row  className="justify-content-center">
+                            <Col sm={10} className="text-center">
+                                <Card>
+                                    
+                                    <Card.Body>
+                                        <blockquote className="blockquote mb-0">
+
+                                            <p>
+
+                                                {' '}
+                                        Somos una empresa en el sector de entretenimiento que desea hacer un estudio de
+                                    mercado en la ciudad de Cali,con el propósito de entender las tendencias y gustos
+                                    de la población caleña. Al finalizar el estudio se debe tomar la decisión de cuál
+                                   evento se ha de realiza.{' '}
+                                            </p>
+                                            
+                                        </blockquote>
+                                    </Card.Body>
+                                </Card>
+                                
+
+                            </Col>
+                        </Row>
 
                     </div>
-                   <div >
-                        <div className="logoContainer2">
-                            <img className="logoStyles center" src={logo_bichoclo}></img>
-
-                        </div>
-                    </div>
-
-                    <div className = "button">
-                                <Link to="/Form" className="formButton">Llena el form, rey</Link>
-                    </div>
-                    <div >
-                    <p className="texto"></p>
-                    </div>
-
-                    <div className="badge2">
-                    
-                    <p className="texto">Somos una empresa en el sector de entretenimiento que desea hacer un estudio de</p>
-                    <p className="texto">mercado en la ciudad de Cali,con el propósito de entender las tendencias y gustos</p>
-                    <p className="texto">de la población caleña. Al finalizar el estudio se debe tomar la decisión de cuál</p>
-                    <p className="texto">evento se ha de realizar</p>
-                    </div>
-                </div>
-    
-            </div>
+                </Container>
+            </div >
 
         )
 
