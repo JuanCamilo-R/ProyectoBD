@@ -6,7 +6,7 @@ import { useHistory } from 'react-router-dom';
 import Button from 'react-bootstrap/Button'
 import logo from '../images/choclitos.jpg';
 import _default from 'react-bootstrap/esm/CardColumns';
-import Navbar from '../components/Navbar'
+import TheNavbar from '../components/Navbar'
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'; // Archivo CSS de Bootstrap 4 
 import '../../node_modules/bootstrap/dist/js/bootstrap.min.js';
 import Card from 'react-bootstrap/Card'
@@ -15,13 +15,15 @@ import Card from 'react-bootstrap/Card'
 import logo_bichoclo from '../images/LOGO-BICHOCLO.png';
 import lfon from '../images/fondo.jpg';
 import { Container, Row, Col } from 'react-bootstrap';
+
 class Badge extends React.Component {
     render() {
         return (
             <div >
-                <Navbar />
+                <TheNavbar/>
+                <div className="BadgeNew__hero ">
                 <Container>
-                    <div className="BadgeNew__hero ">
+                    {/*}
                         <Row>
                             <Col sm={12}>
                                 <div className="lema">
@@ -38,6 +40,7 @@ class Badge extends React.Component {
                                 </div>
                             </Col>
                         </Row>
+        {*/}
                         <Row className="justify-content-center">
                             <Col md="auto">
 
@@ -82,8 +85,9 @@ class Badge extends React.Component {
                             </Col>
                         </Row>
 
-                    </div>
+                    
                 </Container>
+                </div>
             </div >
 
         )

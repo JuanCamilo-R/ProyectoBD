@@ -1,19 +1,33 @@
 import React from 'react';
 import './styles/Badge.css'
 import Button from 'react-bootstrap/Button'
-class Navbar extends React.Component{
+import Navbar from 'react-bootstrap/Navbar'
 
-render(){
+//Imgs
+import logo_bichoclo from '../images/LOGO-BICHOCLO.png';
 
-    return (
-        <nav class="navbar navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">BiChoclo</a>
-        </div>
-    </nav>
-    )
+class TheNavbar extends React.Component {
+
+    render() {
+        return (
+            <Navbar bg="dark" variant="dark">
+                <Navbar.Brand href="#home">
+                    <img
+                        alt=""
+                        src={logo_bichoclo}
+                        width="50"
+                        height="50"
+                        className="d-inline-block align-top"
+                    />{' '}
+                        <div className="d-inline-block align-down">
+                            <h2>BiChoclo</h2>
+                        </div>
+                    
+                </Navbar.Brand>
+            </Navbar>
+        )
+    }
+
 }
 
-}
-
-export default Navbar;
+export default TheNavbar;
