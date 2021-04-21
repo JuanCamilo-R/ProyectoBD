@@ -5,9 +5,13 @@ class Card extends React.Component{
 
     state = {
         step: 1,
+        cedula: '',
         nombre: '',
         apellido: '',
-        email: ''
+        edad: '',
+        genero: '',
+        comuna: '',
+        barrio: ''
     };
 
     nextStep = () =>{
@@ -29,8 +33,8 @@ class Card extends React.Component{
      render(){
 
         const { step } = this.state;
-        const {nombre, apellido, email} = this.state;
-        const values = {nombre, apellido, email};
+        const {cedula, nombre, apellido, edad, genero, comuna, barrio} = this.state;
+        const values = {cedula, nombre, apellido, edad, genero, comuna, barrio};
          switch(step){
              case 1:
                  return(
