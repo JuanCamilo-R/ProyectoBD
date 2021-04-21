@@ -6,11 +6,18 @@
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    background: blue;
-    background: #C6FFDD;  /* fallback for old browsers */
+    /*background: blue;*/
+   /* background: url('../../images/stars.svg'), rgb(222, 246, 167);*/
+    /*background: #C6FFDD;*/  /* fallback for old browsers */
     /*background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */ 
-    background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: linear-gradient(to right, #E5C500, #247200); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /*
+    Color Amarillo del bichoClo: #FFDA40
+    Color Verde  de las hojas: #247200
+    Color café del cabello: #33241A
+    Color amarillo del Logo: #E5C500
+    Color Verdoso del logo: #247200
+    */
 }
 
 .form-container{
