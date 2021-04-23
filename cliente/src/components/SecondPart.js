@@ -3,18 +3,18 @@ import './styles/Badge.css';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import TextField from '@material-ui/core/TextField';
 
 
-export class FirstPart extends Component {
+export class SecondPart extends Component {
     continue = e => {
         e.preventDefault();
         this.props.nextStep();
     }
-
-    show = value => {
-        console.log(value.genero)
+    back = e => {
+        e.preventDefault();
+        this.props.prevStep();
     }
+
 
     render() {
         const { values, inputChange } = this.props;
@@ -23,9 +23,9 @@ export class FirstPart extends Component {
                 <h1 className="h1">Datos generales</h1>
                 <div className="form-group">
                     <label htmlFor="cedula">
-                        Cédula:
+                        Cedula:
                     </label>
-                <input  type = "text" className = "form-control" name = "cedula" onChange = {inputChange('nombre')} value = {values.cedula}/>
+                    <input type="text" className="form-control" name="cedula" onChange={inputChange('nombre')} value={values.cedula} />
                 </div>
                 <div className="form-group">
                     <label htmlFor="nombre">
@@ -51,8 +51,8 @@ export class FirstPart extends Component {
                     </label>
                     <div className="radio">
                         <RadioGroup aria-label="gender" name="gender1" value={values.genero} onChange={inputChange('genero')}>
-                            <FormControlLabel value="Femenino" control={<Radio/>} label="Femenino" />
-                            <FormControlLabel value="Masculino" control={<Radio/>} label="Masculino"/>
+                            <FormControlLabel value="Femenino" control={<Radio />} label="Femenino" />
+                            <FormControlLabel value="Masculino" control={<Radio />} label="Masculino" />
                         </RadioGroup>
                     </div>
                 </div>
@@ -63,15 +63,21 @@ export class FirstPart extends Component {
                     <input type="text" className="form-control" name="barrio" onChange={inputChange('barrio')} value={values.barrio} />
                 </div>
                 <br />
-
-                <div className="text-right">
-                    <button className="btn btn-primary" onClick={this.continue}>
-                        Continuar.
-                    </button>
+                <div className="row">
+                    <div className="col-6">
+                        <button className="btn btn-primary" onClick={this.back}>
+                            Atrás.
+                        </button>
+                    </div>
+                    <div className="col-6 text-right">
+                        <button className="btn btn-primary" onClick={this.continue}>
+                            Continuar.
+                        </button>
+                    </div>
                 </div>
             </div>
         )
     }
 }
 
-export default FirstPart
+export default SecondPart

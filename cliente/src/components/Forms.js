@@ -1,6 +1,6 @@
 import React from 'react';
 import FirstPart from './FirstPart';
-
+import SecondPart from './SecondPart';
 class Forms extends React.Component {
 
     state = {
@@ -39,6 +39,10 @@ class Forms extends React.Component {
             case 1:
                 return (
                         <FirstPart nextStep={this.nextStep} inputChange={this.inputChange} values={values} />
+                );
+            case 2:
+                return(
+                    <SecondPart nextStep = {this.nextStep} prevStep = {this.prevStep} inputChange = {this.inputChange} values = {values}/>
                 );
         }
     }
