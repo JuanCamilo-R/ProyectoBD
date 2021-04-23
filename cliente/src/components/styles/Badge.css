@@ -20,6 +20,15 @@
     */
 }
 
+.remainder{
+    text-align: center;
+}
+
+.form-design{
+    border-radius: 8px;
+    background-color: #f3f2f2;
+}
+
 .form-container{
     background: #fff;
     border-radius: 20px;
@@ -40,8 +49,8 @@
   border: 3px solid rgb(0, 0, 0);
   border-radius: 12px;
   padding: 10px;
-    border: 1px solid #a9a8c2;
-    background: rgb(249, 255, 197);
+  border: 1px solid #a9a8c2;
+  background: rgb(249, 255, 197);
     
     overflow-x: scroll;
   /* Control de la altura con base en el texto del div*/

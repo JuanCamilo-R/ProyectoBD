@@ -12,6 +12,16 @@ class Forms extends React.Component {
         genero: '',
         comuna: '',
         barrio: '',
+        sector: '',
+        peliculasFrecuencia: '',
+        deporteFrecuencia: '',
+        leerFrecuencia: '',
+        cocinarFrecuencia: '',
+        eventosFrecuencia: '',
+        conciertoFrecuencia: '',
+        color: '',
+        mesPreferencia: '',
+        ocupacion: ''
     };
 
     nextStep = () => {
@@ -33,16 +43,22 @@ class Forms extends React.Component {
     render() {
 
         const { step } = this.state;
-        const { cedula, nombre, apellido, edad, genero, comuna, barrio} = this.state;
-        const values = { cedula, nombre, apellido, edad, genero, comuna, barrio};
+        const { cedula, nombre, apellido, edad, genero, comuna, barrio, sector, peliculasFrecuencia,
+            deporteFrecuencia, leerFrecuencia, cocinarFrecuencia, eventosFrecuencia, conciertoFrecuencia,
+            color, mesPreferencia, ocupacion } = this.state;
+        const values = {
+            cedula, nombre, apellido, edad, genero, comuna, barrio,sector, peliculasFrecuencia,
+            deporteFrecuencia, leerFrecuencia, cocinarFrecuencia, eventosFrecuencia, conciertoFrecuencia,
+            color, mesPreferencia, ocupacion
+        };
         switch (step) {
             case 1:
                 return (
-                        <FirstPart nextStep={this.nextStep} inputChange={this.inputChange} values={values} />
+                    <FirstPart nextStep={this.nextStep} inputChange={this.inputChange} values={values} />
                 );
             case 2:
-                return(
-                    <SecondPart nextStep = {this.nextStep} prevStep = {this.prevStep} inputChange = {this.inputChange} values = {values}/>
+                return (
+                    <SecondPart nextStep={this.nextStep} prevStep={this.prevStep} inputChange={this.inputChange} values={values} />
                 );
         }
     }

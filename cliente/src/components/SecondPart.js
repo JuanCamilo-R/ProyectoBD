@@ -20,47 +20,76 @@ export class SecondPart extends Component {
         const { values, inputChange } = this.props;
         return (
             <div className="form-container">
-                <h1 className="h1">Datos generales</h1>
-                <div className="form-group">
-                    <label htmlFor="cedula">
-                        Cedula:
-                    </label>
-                    <input type="text" className="form-control" name="cedula" onChange={inputChange('nombre')} value={values.cedula} />
+                <div>
+                <h1 className="h1">Preguntas</h1>
+                <p className = "remainder"> Puntue del 1 al 5, donde 1 es la frecuencia más baja y 5 la más alta </p>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="nombre">
-                        Nombre:
-                    </label>
-                    <input type="text" className="form-control" name="nombre" onChange={inputChange('nombre')} value={values.nombre} />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="apellido">
-                        Apellido:
-                    </label>
-                    <input type="text" className="form-control" name="apellido" onChange={inputChange('apellido')} value={values.apellido} />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="edad">
-                        Edad:
-                    </label>
-                    <input type="text" className="form-control" name="edad" onChange={inputChange('edad')} value={values.edad} />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="genero">
-                        Genero:
+                <div className="form-group form-design">
+                    <label htmlFor="sector">
+                        ¿En qué sector le gustaría que se haga el evento?
                     </label>
                     <div className="radio">
-                        <RadioGroup aria-label="gender" name="gender1" value={values.genero} onChange={inputChange('genero')}>
-                            <FormControlLabel value="Femenino" control={<Radio />} label="Femenino" />
-                            <FormControlLabel value="Masculino" control={<Radio />} label="Masculino" />
+                        <RadioGroup row arial-label="sector" name="sector" value={values.sector} onChange={inputChange('sector')}>
+                            <FormControlLabel  value="Norte" control={<Radio />} label="Norte" />
+                            <FormControlLabel  value="Sur" control={<Radio />} label="Sur" />
+                            <FormControlLabel  value="Oriente" control={<Radio />} label="Oriente" />
+                            <FormControlLabel  value="Occidente" control={<Radio />} label="Occidente" />
                         </RadioGroup>
                     </div>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="barrio">
-                        Barrio:
+                <br/>
+                <div className="form-group form-design">
+                    <label htmlFor="peliculasFrecuencia">
+                        ¿Qué tan frecuente ve películas al mes?
                     </label>
-                    <input type="text" className="form-control" name="barrio" onChange={inputChange('barrio')} value={values.barrio} />
+                    <div className="radio">
+                        <RadioGroup row arial-label="peliculasFrecuencia" name="peliculasFrecuencia" value={values.peliculasFrecuencia} onChange={inputChange('peliculasFrecuencia')}>
+                            <FormControlLabel type="number" value="1" control={<Radio />} label="1" />
+                            <FormControlLabel type="number" value="2" control={<Radio />} label="2" />
+                            <FormControlLabel type="number" value="3" control={<Radio />} label="3" />
+                            <FormControlLabel type="number" value="4" control={<Radio />} label="4" />
+                            <FormControlLabel type="number" value="5" control={<Radio />} label="5" />
+                        </RadioGroup>
+                    </div>
+                </div>
+                <br/>
+                <div className="form-group form-design">
+                    <label htmlFor="deporteFrecuencia">
+                        ¿Qué tan frecuente hace deporte semanalmente?
+                    </label>
+                    <RadioGroup row arial-label="deporteFrecuencia" name="deporteFrecuencia" value={values.deporteFrecuencia} onChange={inputChange('deporteFrecuencia')}>
+                        <FormControlLabel type="number" value="1" control={<Radio />} label="1" />
+                        <FormControlLabel type="number" value="2" control={<Radio />} label="2" />
+                        <FormControlLabel type="number" value="3" control={<Radio />} label="3" />
+                        <FormControlLabel type="number" value="4" control={<Radio />} label="4" />
+                        <FormControlLabel type="number" value="5" control={<Radio />} label="5" />
+                    </RadioGroup>
+                </div>
+                <br/>
+                <div className="form-group form-design">
+                    <label htmlFor="leerFrecuencia">
+                        ¿Cuántas veces lee por semana?
+                    </label>
+                    <RadioGroup row arial-label="leerFrecuencia" name="leerFrecuencia" value={values.leerFrecuencia} onChange={inputChange('leerFrecuencia')}>
+                        <FormControlLabel type="number" value="1" control={<Radio />} label="1" />
+                        <FormControlLabel type="number" value="2" control={<Radio />} label="2" />
+                        <FormControlLabel type="number" value="3" control={<Radio />} label="3" />
+                        <FormControlLabel type="number" value="4" control={<Radio />} label="4" />
+                        <FormControlLabel type="number" value="5" control={<Radio />} label="5" />
+                    </RadioGroup>
+                </div>
+                <br/>
+                <div className="form-group form-design">
+                    <label htmlFor="cocinarFrecuencia">
+                        ¿Qué tanto le gusta cocinar y aprender recetas?
+                    </label>
+                    <RadioGroup row arial-label="cocinarFrecuencia" name="cocinarFrecuencia" value={values.cocinarFrecuencia} onChange={inputChange('cocinarFrecuencia')}>
+                        <FormControlLabel type="number" value="1" control={<Radio />} label="1" />
+                        <FormControlLabel type="number" value="2" control={<Radio />} label="2" />
+                        <FormControlLabel type="number" value="3" control={<Radio />} label="3" />
+                        <FormControlLabel type="number" value="4" control={<Radio />} label="4" />
+                        <FormControlLabel type="number" value="5" control={<Radio />} label="5" />
+                    </RadioGroup>
                 </div>
                 <br />
                 <div className="row">
