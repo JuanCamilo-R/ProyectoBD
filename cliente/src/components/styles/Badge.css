@@ -199,5 +199,32 @@
   
     padding: 10px;
 }
+
+.text-content {
+    margin-bottom: 100px; /*con esto se agranda contenido*/
+}
 /* Poner aquí el diseño del botón al pasar por encima con el mouse*/
 
+
+/*Footer*/
+.footer {
+    background-color: #212529;
+    height:auto;
+    margin-top:-6%;
+    bottom:0;
+    position:relative;
+    color:white;
+    text-align: center;
+    padding: 20px;
+}
+
+.internal-footer {
+    
+}
+
+#logo_u {
+    width:50px;
+    height:50px;
+    margin-top:15px;
+     
+}

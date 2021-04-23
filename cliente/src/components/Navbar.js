@@ -1,7 +1,6 @@
 import React from 'react';
 import './styles/Badge.css'
-import Button from 'react-bootstrap/Button'
-import Navbar from 'react-bootstrap/Navbar'
+import Navbar from 'react-bootstrap/Navbar'  
 
 //Imgs
 import logo_bichoclo from '../images/LOGO-BICHOCLO.png';
@@ -10,7 +9,7 @@ class TheNavbar extends React.Component {
 
     render() {
         return (
-            <Navbar bg="dark" variant="dark">
+            <Navbar bg="dark" variant="dark" fixed= "top">
                 <Navbar.Brand href="#home">
                     <img
                         alt=""

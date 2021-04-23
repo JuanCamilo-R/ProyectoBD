@@ -10,6 +10,7 @@ import TheNavbar from '../components/Navbar'
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'; // Archivo CSS de Bootstrap 4 
 import '../../node_modules/bootstrap/dist/js/bootstrap.min.js';
 import Card from 'react-bootstrap/Card'
+import MyFooter from '../components/Footer'
 
 //Images
 import logo_bichoclo from '../images/LOGO-BICHOCLO.png';
@@ -61,7 +62,7 @@ class Badge extends React.Component {
                         </Row>
 
 
-                        <Row  className="justify-content-center">
+                        <Row  className="justify-content-center text-content">
                             <Col sm={10} className="text-center">
                                 <Card>
                                     
@@ -85,9 +86,17 @@ class Badge extends React.Component {
                             </Col>
                         </Row>
 
-                    
-                </Container>
+                        
+                </Container> 
+                
                 </div>
+                <Row>
+                    <Col md={121}>
+                    <MyFooter/>    
+                    </Col>
+               
+                </Row>
+               
             </div >
 
         )
