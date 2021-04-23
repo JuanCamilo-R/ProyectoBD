@@ -62,6 +62,12 @@ export class FirstPart extends Component {
                     </label>
                     <input type="text" className="form-control" name="barrio" onChange={inputChange('barrio')} value={values.barrio} />
                 </div>
+                <div>
+                    <label htmlFor="comuna">
+                        Comuna:
+                    </label>
+                    <input type = "text" className = "form-control" name = "comuna" onChange = {inputChange('comuna')} value = {values.comuna}/>
+                </div>
                 <br />
 
                 <div className="text-right">
