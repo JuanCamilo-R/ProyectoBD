@@ -49,6 +49,18 @@ export class FirstPart extends Component {
                     <input type="text" className="form-control" name="edad" onChange={inputChange('edad')} value={values.edad} />
                 </div>
                 <br/>
+                <div className="form-group">
+                    <label htmlFor="edad">
+                        Ocupacion:
+                    </label>
+                    <div className="radio">
+                        <RadioGroup aria-label="gender" name="gender1" value={values.genero} onChange={inputChange('genero')}>
+                            <FormControlLabel value="Femenino" control={<Radio/>} label="Estudia" />
+                            <FormControlLabel value="Masculino" control={<Radio/>} label="Trabaja"/>
+                        </RadioGroup>
+                    </div>
+                </div>
+                <br/>
                 <div className="form-group form-design">
                     <label htmlFor="genero">
                         Genero:
