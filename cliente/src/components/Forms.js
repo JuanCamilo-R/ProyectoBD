@@ -10,18 +10,7 @@ class Forms extends React.Component {
         apellido: '',
         edad: '',
         genero: '',
-        comuna: '',
-        barrio: '',
-        sector: '',
-        peliculasFrecuencia: '',
-        deporteFrecuencia: '',
-        leerFrecuencia: '',
-        cocinarFrecuencia: '',
-        eventosFrecuencia: '',
-        conciertoFrecuencia: '',
-        color: '',
-        mesPreferencia: '',
-        ocupacion: ''
+        comuna: ''
     };
 
     nextStep = () => {
