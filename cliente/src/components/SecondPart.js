@@ -21,19 +21,20 @@ export class SecondPart extends Component {
         return (
             <div className="form-container">
                 <div>
-                <h1 className="h1">Preguntas</h1>
+                <h1 className="h1">Categoría de Películas</h1>
                 <p className = "remainder"> Puntue del 1 al 5, donde 1 es la frecuencia más baja y 5 la más alta </p>
                 </div>
                 <div className="form-group form-design">
                     <label htmlFor="sector">
-                        ¿En qué sector le gustaría que se haga el evento?
+                        ¿Qué tan frecuente ve películas?
                     </label>
                     <div className="radio">
-                        <RadioGroup row arial-label="sector" name="sector" value={values.sector} onChange={inputChange('sector')}>
-                            <FormControlLabel  value="Norte" control={<Radio />} label="Norte" />
-                            <FormControlLabel  value="Sur" control={<Radio />} label="Sur" />
-                            <FormControlLabel  value="Oriente" control={<Radio />} label="Oriente" />
-                            <FormControlLabel  value="Occidente" control={<Radio />} label="Occidente" />
+                        <RadioGroup row arial-label="sector" name="sector" /*value={values.sector}*/ onChange={inputChange('sector')}>
+                            <FormControlLabel  value="1" control={<Radio />} label="1" />
+                            <FormControlLabel  value="2" control={<Radio />} label="2" />
+                            <FormControlLabel  value="3" control={<Radio />} label="3" />
+                            <FormControlLabel  value="4" control={<Radio />} label="4" />
+                            <FormControlLabel  value="5" control={<Radio />} label="5" />
                         </RadioGroup>
                     </div>
                 </div>

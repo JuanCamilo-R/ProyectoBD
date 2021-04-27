@@ -11,7 +11,7 @@ class PaginaForm extends React.Component {
             <div className = "h-100">
                 <TheNavbar/>
                 <div className="Form">
-                    <div className="container">
+                    <div className="container container-style">
                         <Forms/>
                     </div>
                 </div>
