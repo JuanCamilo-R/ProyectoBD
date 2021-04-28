@@ -9,7 +9,7 @@ class TheNavbar extends React.Component {
 
     render() {
         return (
-            <Navbar bg="dark" variant="dark">
+            <Navbar bg="dark" variant="dark" fixed = "top">
                 <Navbar.Brand href="#home">
                     <img
                         alt=""

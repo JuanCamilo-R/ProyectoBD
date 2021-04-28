@@ -8,10 +8,10 @@ class PaginaForm extends React.Component {
     render() {
 
         return (
-            <div>
+            <div className = "h-100">
                 <TheNavbar/>
-                <div className="Form" style={{marginTop:'40px'}}>
-                    <div className="container">
+                <div className="Form">
+                    <div className="container container-style">
                         <Forms/>
                     </div>
                 </div>
