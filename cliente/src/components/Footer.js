@@ -5,8 +5,9 @@ import logo_universidad from '../images/logo_universidad.png';
 
 function MyFooter() {
     return (
-        <footer className="footer text-center">  
-                <Row>
+        <footer className="myfooter text-center"> 
+            <Container fluid style={{ paddingLeft: 0, paddingRight: 0 }}>
+            <Row>   
                     <Col md={3}>
                         <Row>
                             <Col md={12}>
@@ -14,7 +15,7 @@ function MyFooter() {
                             </Col>
 
                         </Row>
-                        <Row>
+                        <Row>   
                             <Col md={12}>
                                 <p>Esto es un footer</p>
                             </Col>
@@ -50,7 +51,10 @@ function MyFooter() {
                      <img id="logo_u" src={logo_universidad} />
                     </Col>
                 </Row>     
-        </footer>
+        
+
+            </Container>
+              </footer>
     );
 }
 

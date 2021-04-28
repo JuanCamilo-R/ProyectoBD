@@ -17,7 +17,7 @@ const router = new Router();
 module.exports = router;
 
 router.get('/consultatotalpacientes', async (req, res) => {
-  //const { id } = req.params
+  //const { id } = req.params 
   const { rows } = await client.query('SELECT * FROM pacientes');
   res.send(rows);
 });

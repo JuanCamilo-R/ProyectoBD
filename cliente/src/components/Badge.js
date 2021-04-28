@@ -91,7 +91,7 @@ class Badge extends React.Component {
                 
                 </div>
                 <Row>
-                    <Col md={121}>
+                    <Col md={12}>
                     <MyFooter/>    
                     </Col>
                
