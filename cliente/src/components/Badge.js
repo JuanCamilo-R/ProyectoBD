@@ -19,7 +19,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 class Badge extends React.Component {
     render() {
         return (
-            <div >
+            <div>
                 <TheNavbar/>
                 <div className="BadgeNew__hero ">
                 <Container>
