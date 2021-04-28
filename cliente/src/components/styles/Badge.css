@@ -30,7 +30,7 @@
 }
 
 .container-style{
-    margin-top:10%;
+    margin-top:20%;
 }
 
 .form-container{
@@ -80,14 +80,23 @@
 }
 
 .BadgeNew__hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     padding: 2rem 0;
     background: url('../../images/stars.svg'), #1B1B25;
     background-repeat: repeat;
-    margin-bottom: 1rem;
-    height:auto;
+    height: 100vh;
   }
 
+  .main_container {
+    margin: 0 auto;
+    position:relative;  
+    
+  
+  }
+ 
 /*
 .badge {
     background: #000000;
@@ -230,10 +239,6 @@
     text-align: center;
     padding-top:20px;
     padding-bottom:20px;
-}
-
-.internal-footer {
-    
 }
 
 #logo_u {

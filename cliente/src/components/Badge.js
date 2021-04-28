@@ -24,24 +24,7 @@ class Badge extends React.Component {
                 <TheNavbar/>
                 <div className="BadgeNew__hero ">
                 <Container>
-                    {/*}
-                        <Row>
-                            <Col sm={12}>
-                                <div className="lema">
-                                    <div className="badge3">
-                                        <p className="texto3"> </p>
-                                        <p className="texto3">Organizadores:</p>
-                                        <p className="texto2">Juan Camilo Randazzo</p>
-                                        <p className="texto2">Jose David Barona</p>
-                                        <p className="texto2">Andres Rincon</p>
-                                        <p className="texto2">Jennyfer Belalcazar</p>
-                                        <p className="texto3"> </p>
-                                    </div>
-
-                                </div>
-                            </Col>
-                        </Row>
-        {*/}
+                    <div className="main_container">
                         <Row className="justify-content-center">
                             <Col md="auto">
 
@@ -86,7 +69,7 @@ class Badge extends React.Component {
                             </Col>
                         </Row>
 
-                        
+                        </div> 
                 </Container> 
                 
                 </div>
