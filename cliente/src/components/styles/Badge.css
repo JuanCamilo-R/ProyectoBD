@@ -20,6 +20,9 @@
     */
 }
 
+.borde-opaco{
+    border: 5px solid rgba(133, 133, 133, 0.5);
+}
 .form-container{
     background: #fff;
     border-radius: 20px;

@@ -9,7 +9,7 @@ class PaginaForm extends React.Component {
 
         return (
             <div>
-                <TheNavbar/>
+                
                 <div className="Form">
                     <div className="container">
                         <Forms/>

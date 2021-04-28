@@ -1,6 +1,7 @@
 import React from 'react';
 import FirstPart from './FirstPart';
 import SecondPart from './SecondPart';
+import ThirdPart from './ThirdPart';
 class Forms extends React.Component {
 
     state = {
@@ -33,16 +34,27 @@ class Forms extends React.Component {
     render() {
 
         const { step } = this.state;
-        const { cedula, nombre, apellido, edad, genero, comuna, barrio} = this.state;
-        const values = { cedula, nombre, apellido, edad, genero, comuna, barrio};
+        const { cedula, nombre, apellido, edad, genero, comuna, barrio, sector, peluculasFrecuencia,
+            deporteFrecuencia, leerFrecuencia, cocinarFrecuencia, eventosFrecuencia, conciertoFrecuencia,
+            color, mesPreferencia, ocupacion, culturalFrecuencia, deportivosFrecuencia} = this.state;
+        const values = { 
+        cedula, nombre, apellido, edad, genero, comuna, barrio, sector, peluculasFrecuencia,
+        deporteFrecuencia, leerFrecuencia, cocinarFrecuencia, eventosFrecuencia, conciertoFrecuencia,
+        color, mesPreferencia, ocupacion, culturalFrecuencia, deportivosFrecuencia
+
+        };
         switch (step) {
             case 1:
                 return (
-                        <FirstPart nextStep={this.nextStep} inputChange={this.inputChange} values={values} />
+                    <FirstPart nextStep={this.nextStep} inputChange={this.inputChange} values={values} />
                 );
             case 2:
                 return(
                     <SecondPart nextStep = {this.nextStep} prevStep = {this.prevStep} inputChange = {this.inputChange} values = {values}/>
+                );
+            case 3:
+                return(
+                    <ThirdPart nextStep = {this.nextStep} prevStep = {this.prevStep} inputChange = {this.inputChange} values = {values}/>
                 );
         }
     }
