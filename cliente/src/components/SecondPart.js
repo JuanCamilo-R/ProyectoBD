@@ -98,7 +98,7 @@ export class SecondPart extends Component {
                         </button>
                     </div>
                     <div className="col-6 text-right">
-                        <button className="btn btn-primary" onClick={this.show}>
+                        <button className="btn btn-primary" onClick={this.continue}>
                             Continuar.
                         </button>
                     </div>
