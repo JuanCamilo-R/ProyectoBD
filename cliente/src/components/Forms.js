@@ -36,11 +36,11 @@ class Forms extends React.Component {
         const { step } = this.state;
         const { cedula, nombre, apellido, edad, genero, comuna, barrio, sector, peliculasFrecuencia,
             deporteFrecuencia, leerFrecuencia, cocinarFrecuencia, eventosFrecuencia, conciertoFrecuencia,
-            color, mesPreferencia, ocupacion, culturalFrecuencia, deportivosFrecuencia } = this.state;
+            color, mesPreferencia, ocupacion, deportivosFrecuencia } = this.state;
         const values = {
             cedula, nombre, apellido, edad, genero, comuna, barrio,sector, peliculasFrecuencia,
             deporteFrecuencia, leerFrecuencia, cocinarFrecuencia, eventosFrecuencia, conciertoFrecuencia,
-            color, mesPreferencia, ocupacion, culturalFrecuencia, deportivosFrecuencia
+            color, mesPreferencia, ocupacion, deportivosFrecuencia
         };
         switch (step) {
             case 1:
