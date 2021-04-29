@@ -11,7 +11,8 @@ class Forms extends React.Component {
         apellido: '',
         edad: '',
         genero: '',
-        comuna: ''
+        comuna: '',
+        atractivoPelicula: []
     };
 
     nextStep = () => {
@@ -30,16 +31,27 @@ class Forms extends React.Component {
         })
     };
 
+    inputChangeArray = category => event => {
+        const target = event.target;
+        var value = target.value;
+        console.log(category);
+        if(target.checked){
+            this.state.atractivoPelicula.push(value);
+        }else{
+            this.state.category.splice(value, 1);
+        };
+    }
+
     render() {
 
         const { step } = this.state;
         const { cedula, nombre, apellido, edad, genero, comuna, barrio, sector, peliculasFrecuencia,
             deporteFrecuencia, leerFrecuencia, cocinarFrecuencia, eventosFrecuencia, conciertoFrecuencia,
-            color, mesPreferencia, ocupacion, culturalFrecuencia, deportivosFrecuencia } = this.state;
+            color, mesPreferencia, ocupacion, deportivosFrecuencia, atractivoPelicula } = this.state;
         const values = {
             cedula, nombre, apellido, edad, genero, comuna, barrio,sector, peliculasFrecuencia,
             deporteFrecuencia, leerFrecuencia, cocinarFrecuencia, eventosFrecuencia, conciertoFrecuencia,
-            color, mesPreferencia, ocupacion, culturalFrecuencia, deportivosFrecuencia
+            color, mesPreferencia, ocupacion,  deportivosFrecuencia, atractivoPelicula
         };
         switch (step) {
             case 1:
@@ -48,7 +60,7 @@ class Forms extends React.Component {
                 );
             case 2:
                 return (
-                    <SecondPart nextStep={this.nextStep} prevStep={this.prevStep} inputChange={this.inputChange} values={values} />
+                    <SecondPart nextStep={this.nextStep} prevStep={this.prevStep} inputChange={this.inputChange} values={values} inputChangeArray = {this.inputChangeArray}/>
                 );
             case 3:
                 return(
