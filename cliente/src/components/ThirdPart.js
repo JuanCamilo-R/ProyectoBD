@@ -93,6 +93,7 @@ export class ThirdPart extends Component {
                         </RadioGroup>
                     </div>
                 </div>
+                <br />
                 <div className="row">
                     <div className="col-6">
                         <button className="btn btn-primary" onClick={this.back}>
