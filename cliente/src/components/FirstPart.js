@@ -3,7 +3,6 @@ import './styles/Badge.css';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import TextField from '@material-ui/core/TextField';
 
 
 export class FirstPart extends Component {
@@ -57,6 +56,7 @@ export class FirstPart extends Component {
                         <RadioGroup aria-label="gender" name="gender1" value={values.genero} onChange={inputChange('genero')}>
                             <FormControlLabel value="Femenino" control={<Radio/>} label="Estudia" />
                             <FormControlLabel value="Masculino" control={<Radio/>} label="Trabaja"/>
+                            <FormControlLabel value="Desempleado" control={<Radio/>} label="Desempleado"/>
                         </RadioGroup>
                     </div>
                 </div>
@@ -73,9 +73,21 @@ export class FirstPart extends Component {
                     </div>
                 </div>
                 <br/>
+                <div className="form-group form-design">
+                    <label htmlFor="genero">
+                        ¿Tiene hijos?
+                    </label>
+                    <div className="radio">
+                        <RadioGroup aria-label="gender" name="gender1" value={values.genero} onChange={inputChange('genero')}>
+                            <FormControlLabel value="Si" control={<Radio/>} label="Si" />
+                            <FormControlLabel value="No" control={<Radio/>} label="No"/>
+                        </RadioGroup>
+                    </div>
+                </div>
+                <br/>
                 <div className = "form-group">
                     <label htmlFor="comuna">
-                        Comuna:
+                        Comuna: (Digite solo el numero, sin letras)
                     </label>
                     <input type = "text" className = "form-control" name = "comuna" onChange = {inputChange('comuna')} value = {values.comuna}/>
                 </div>

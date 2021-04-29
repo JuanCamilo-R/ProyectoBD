@@ -10,6 +10,7 @@ import TheNavbar from '../components/Navbar'
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'; // Archivo CSS de Bootstrap 4 
 import '../../node_modules/bootstrap/dist/js/bootstrap.min.js';
 import Card from 'react-bootstrap/Card'
+import MyFooter from './Footer';
 
 //Images
 import logo_bichoclo from '../images/LOGO-BICHOCLO.png';
@@ -23,24 +24,7 @@ class Badge extends React.Component {
                 <TheNavbar/>
                 <div className="BadgeNew__hero ">
                 <Container>
-                    {/*}
-                        <Row>
-                            <Col sm={12}>
-                                <div className="lema">
-                                    <div className="badge3">
-                                        <p className="texto3"> </p>
-                                        <p className="texto3">Organizadores:</p>
-                                        <p className="texto2">Juan Camilo Randazzo</p>
-                                        <p className="texto2">Jose David Barona</p>
-                                        <p className="texto2">Andres Rincon</p>
-                                        <p className="texto2">Jennyfer Belalcazar</p>
-                                        <p className="texto3"> </p>
-                                    </div>
-
-                                </div>
-                            </Col>
-                        </Row>
-        {*/}
+                    <div className="main_container">
                         <Row className="justify-content-center">
                             <Col md="auto">
 
@@ -61,14 +45,14 @@ class Badge extends React.Component {
                         </Row>
 
 
-                        <Row  className="justify-content-center">
+                        <Row  className="justify-content-center text-content">
                             <Col sm={10} className="text-center">
                                 <Card>
                                     
                                     <Card.Body>
                                         <blockquote className="blockquote mb-0">
 
-                                            <p>
+                                            <p className="text-small">
 
                                                 {' '}
                                         Somos una empresa en el sector de entretenimiento que desea hacer un estudio de
@@ -85,9 +69,15 @@ class Badge extends React.Component {
                             </Col>
                         </Row>
 
-                    
-                </Container>
+                        </div> 
+                </Container> 
+                
                 </div>
+                <div>
+                    
+                    <MyFooter/>    
+                    
+                </div>           
             </div >
 
         )

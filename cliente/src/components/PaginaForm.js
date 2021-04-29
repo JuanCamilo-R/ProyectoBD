@@ -2,21 +2,30 @@ import React from 'react';
 import './styles/Badge.css'
 import Forms from './Forms';
 import TheNavbar from './Navbar';
-
+import MyFooter from './Footer';
+import { Container, Row, Col } from 'react-bootstrap';
 class PaginaForm extends React.Component {
 
     render() {
 
         return (
-            <div className = "h-100">
-                <TheNavbar/>
-                <div className="Form">
-                    <div className="container container-style">
-                        <Forms/>
-                    </div>
+            <div>
+                <TheNavbar />
+                <div className="h-100 Form">
+                    <Container>
+                        <div>
+                            <div className="container-style">
+                                <Forms />
+                            </div>
+                        </div>
+                    </Container>
+                    
                 </div>
-            </div>
+                <div>
+                    <MyFooter />
+                </div>
 
+            </div>
         )
 
     }
