@@ -17,7 +17,8 @@ class Forms extends React.Component {
         apellido: '',
         edad: '',
         genero: '',
-        comuna: ''
+        comuna: '',
+        atractivoPelicula: []
     };
 
     nextStep = () => {
@@ -35,6 +36,17 @@ class Forms extends React.Component {
             [input]: e.target.value
         })
     };
+
+    inputChangeArray = category => event => {
+        const target = event.target;
+        var value = target.value;
+        console.log(category);
+        if(target.checked){
+            this.state.atractivoPelicula.push(value);
+        }else{
+            this.state.category.splice(value, 1);
+        };
+    }
 
     render() {
 
@@ -54,7 +66,7 @@ class Forms extends React.Component {
                 );
             case 2:
                 return (
-                    <SecondPart nextStep={this.nextStep} prevStep={this.prevStep} inputChange={this.inputChange} values={values} />
+                    <SecondPart nextStep={this.nextStep} prevStep={this.prevStep} inputChange={this.inputChange} values={values} inputChangeArray = {this.inputChangeArray}/>
                 );
             case 3:
                 return(

@@ -3,6 +3,7 @@ import './styles/Badge.css';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
+import { Checkbox, FormGroup } from '@material-ui/core';
 
 
 export class SecondPart extends Component {
@@ -15,14 +16,19 @@ export class SecondPart extends Component {
         this.props.prevStep();
     }
 
+    show = () => {
+        console.log(this.props.values.atractivoPelicula);
+    }
 
     render() {
-        const { values, inputChange } = this.props;
+        const { values, inputChange, inputChangeArray } = this.props;
+        
+    
         return (
             <div className="form-container">
                 <div>
-                <h1 className="h1">Categoría de Películas</h1>
-                <p className = "remainder"> Puntue del 1 al 5, donde 1 es la frecuencia más baja y 5 la más alta </p>
+                    <h1 className="h1">Categoría de Películas</h1>
+                    <p className="remainder"> Puntue del 1 al 5, donde 1 es la frecuencia más baja y 5 la más alta </p>
                 </div>
                 <div className="form-group form-design">
                     <label htmlFor="sector">
@@ -30,15 +36,15 @@ export class SecondPart extends Component {
                     </label>
                     <div className="radio">
                         <RadioGroup row arial-label="sector" name="sector" /*value={values.sector}*/ onChange={inputChange('sector')}>
-                            <FormControlLabel  value="1" control={<Radio />} label="1" />
-                            <FormControlLabel  value="2" control={<Radio />} label="2" />
-                            <FormControlLabel  value="3" control={<Radio />} label="3" />
-                            <FormControlLabel  value="4" control={<Radio />} label="4" />
-                            <FormControlLabel  value="5" control={<Radio />} label="5" />
+                            <FormControlLabel value="1" control={<Radio />} label="1" />
+                            <FormControlLabel value="2" control={<Radio />} label="2" />
+                            <FormControlLabel value="3" control={<Radio />} label="3" />
+                            <FormControlLabel value="4" control={<Radio />} label="4" />
+                            <FormControlLabel value="5" control={<Radio />} label="5" />
                         </RadioGroup>
                     </div>
                 </div>
-                <br/>
+                <br />
                 <div className="form-group form-design">
                     <label htmlFor="peliculasFrecuencia">
                         Independientemente de su respuesta arriba, ¿cuál es su género favorito?
@@ -56,20 +62,20 @@ export class SecondPart extends Component {
                         </RadioGroup>
                     </div>
                 </div>
-                <br/>
+                <br />
                 <div className="form-group form-design">
                     <label htmlFor="deporteFrecuencia">
                         De las siguientes opciones, ¿qué es lo que más le atrae de una película?
                     </label>
-                    <RadioGroup row arial-label="deporteFrecuencia" name="deporteFrecuencia" value={values.deporteFrecuencia} onChange={inputChange('deporteFrecuencia')}>
-                        <FormControlLabel type="text" value="1" control={<Radio />} label="El argumento" />
-                        <FormControlLabel type="text" value="2" control={<Radio />} label="Los efectos visuales" />
-                        <FormControlLabel type="text" value="3" control={<Radio />} label="Actores famosos" />
-                        <FormControlLabel type="text" value="4" control={<Radio />} label="Otro" />
-                        <FormControlLabel type="text" value="5" control={<Radio />} label="Ninguno" />
-                    </RadioGroup>
+                    <FormGroup row arial-label="atractivoPelicula" name="atractivoPelicula" value={values.atractivoPelicula} onClick={(inputChangeArray('atractivoPelicula'))}>
+                        <FormControlLabel control={<Checkbox />} value="1" label="Sinopsis" />
+                        <FormControlLabel control={<Checkbox/>} value="2" label="Efectos visuales"/>
+                        <FormControlLabel control={<Checkbox />} value="3" label="Actores famosos"/>
+                        <FormControlLabel control={<Checkbox />} value="4" label="Otro"/>
+                        <FormControlLabel control={<Checkbox />} value="5" label="Ninguno"/>
+                    </FormGroup>
                 </div>
-                <br/>
+                <br />
                 <div className="form-group form-design">
                     <label htmlFor="leerFrecuencia">
                         ¿Usualmente con qué acompaña las películas?
@@ -92,7 +98,7 @@ export class SecondPart extends Component {
                         </button>
                     </div>
                     <div className="col-6 text-right">
-                        <button className="btn btn-primary" onClick={this.continue}>
+                        <button className="btn btn-primary" onClick={this.show}>
                             Continuar.
                         </button>
                     </div>
