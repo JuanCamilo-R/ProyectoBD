@@ -10,7 +10,7 @@ import TheNavbar from '../components/Navbar'
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'; // Archivo CSS de Bootstrap 4 
 import '../../node_modules/bootstrap/dist/js/bootstrap.min.js';
 import Card from 'react-bootstrap/Card'
-import MyFooter from '../components/Footer'
+import MyFooter from './Footer';
 
 //Images
 import logo_bichoclo from '../images/LOGO-BICHOCLO.png';
@@ -52,7 +52,7 @@ class Badge extends React.Component {
                                     <Card.Body>
                                         <blockquote className="blockquote mb-0">
 
-                                            <p>
+                                            <p className="text-small">
 
                                                 {' '}
                                         Somos una empresa en el sector de entretenimiento que desea hacer un estudio de
@@ -73,13 +73,11 @@ class Badge extends React.Component {
                 </Container> 
                 
                 </div>
-                <Row>
-                    <Col md={12}>
+                <div>
+                    
                     <MyFooter/>    
-                    </Col>
-               
-                </Row>
-               
+                    
+                </div>           
             </div >
 
         )
