@@ -3,6 +3,11 @@ import FirstPart from './FirstPart';
 import SecondPart from './SecondPart';
 import ThirdPart from './ThirdPart';
 import ForthPart from './ForthPart';
+import FifthPart from './FifthPart';
+import SixthPart from './SixthPart';
+import SeventhPart from './SeventhPart';
+import EightPart from './EightPart';
+
 class Forms extends React.Component {
 
     state = {
@@ -60,6 +65,23 @@ class Forms extends React.Component {
                     <ForthPart nextStep={this.nextStep} prevStep={this.prevStep} inputChange={this.inputChange} values={values} />
                );
 
+               case 5:
+                return (
+                    <FifthPart nextStep={this.nextStep} prevStep={this.prevStep} inputChange={this.inputChange} values={values} />
+               );
+               case 6:
+                return (
+                    <SixthPart nextStep={this.nextStep} prevStep={this.prevStep} inputChange={this.inputChange} values={values} />
+               );
+
+               case 7:
+                return (
+                    <SeventhPart nextStep={this.nextStep} prevStep={this.prevStep} inputChange={this.inputChange} values={values} />
+               );
+               case 8:
+                return (
+                    <EightPart nextStep={this.nextStep} prevStep={this.prevStep} inputChange={this.inputChange} values={values} />
+               );
 
         }
     }
