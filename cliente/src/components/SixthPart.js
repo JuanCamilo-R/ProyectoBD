@@ -19,7 +19,7 @@ export class SixthPart extends Component {
 
 
     render() {
-        const { values, inputChange } = this.props;
+        const { values, inputChange,inputChangeArray } = this.props;
         return (
             <div className="form-container">
                 <div>
@@ -27,11 +27,11 @@ export class SixthPart extends Component {
                 <p className = "remainder"> Puntue del 1 al 5, donde 1 es la frecuencia más baja y 5 la más alta </p>
                 </div>
                 <div className="form-group form-design">
-                    <label htmlFor="sector">
+                    <label htmlFor="frecuencia_musica">
                         Con qué frecuencia escucha musica al día
                     </label>
                     <div className="radio">
-                        <RadioGroup row arial-label="sector" name="sector" /*value={values.sector}*/ onChange={inputChange('sector')}>
+                        <RadioGroup row arial-label="frecuencia_musica" name="frecuencia_musica" value={values.frecuencia_musica} onChange={inputChange('frecuencia_musica')}>
                             <FormControlLabel  value="1" control={<Radio />} label="1" />
                             <FormControlLabel  value="2" control={<Radio />} label="2" />
                             <FormControlLabel  value="3" control={<Radio />} label="3" />
@@ -42,11 +42,11 @@ export class SixthPart extends Component {
                 </div>
                 <br/>
                 <div className="form-group form-design">
-                    <label htmlFor="deporteFrecuencia">
+                    <label htmlFor="nivel_gusto_concierto">
                          ¿Qué tanto le gusta ir a conciertos?
                     </label>
                     <div className="radio">
-                        <RadioGroup row arial-label="sector" name="sector" /*value={values.sector}*/ onChange={inputChange('sector')}>
+                        <RadioGroup row arial-label="nivel_gusto_concierto" name="nivel_gusto_concierto" value={values.nivel_gusto_concierto} onChange={inputChange('nivel_gusto_concierto')}>
                             <FormControlLabel  value="1" control={<Radio />} label="1" />
                             <FormControlLabel  value="2" control={<Radio />} label="2" />
                             <FormControlLabel  value="3" control={<Radio />} label="3" />
@@ -57,10 +57,10 @@ export class SixthPart extends Component {
                 </div>
                 <br/>
                 <div className="form-group form-design">
-                    <label htmlFor="leerFrecuencia">
+                    <label htmlFor="genero_musica">
                      Generos de musica favoritos
                     </label>
-                    <FormGroup row arial-label="deporteFrecuencia" name="deporteFrecuencia" value={values.deporteFrecuencia} onChange={inputChange('deporteFrecuencia')}>
+                    <FormGroup row arial-label="genero_musica" name="genero_musica" value={values.genero_musica} onChange={inputChangeArray('genero_musica')}>
                         <FormControlLabel control={<Checkbox />} label="Clásica"/>
                         <FormControlLabel control={<Checkbox  />} label="Salsa"/>
                         <FormControlLabel control={<Checkbox  />} label="Vallenato"/>
