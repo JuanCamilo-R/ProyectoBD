@@ -53,7 +53,7 @@ export class FifthPart extends Component {
                         <FormControlLabel type="text" value="5" control={<Radio />} label="Carnes" />
                         <FormControlLabel type="text" value="6" control={<Radio />} label="Pescado" />
                         <FormControlLabel type="text" value="7" control={<Radio />} label="Mariscos" />
-                        <FormControlLabel type="text" value="8" control={<Radio />} label="Pasta" />
+                        <FormControlLabel type="text" value="8" control={<Radio />} label="Pastas" />
                         <FormControlLabel type="text" value="9" control={<Radio />} label="Otro"/>
                     </RadioGroup>
                 </div>
@@ -63,11 +63,11 @@ export class FifthPart extends Component {
                         ¿Cuál es el mayor problema para seguir las recetas?
                     </label>
                     <FormGroup row arial-label="dificultades_cocina" name="dificultades_cocina" value={values.dificultades_cocina} onChange={inputChangeArray('dificultades_cocina')}>
-                        <FormControlLabel control={<Checkbox  />} label="Falta de ingredientes"/>
-                        <FormControlLabel control={<Checkbox />} label="Falta de tiempo"/>
-                        <FormControlLabel control={<Checkbox  />} label="Falta de claridad en las instrucciones"/>
-                        <FormControlLabel control={<Checkbox  />} label="No le gusta cocinar"/>
-                        <FormControlLabel control={<Checkbox  />} label="Otro"/>
+                        <FormControlLabel control={<Checkbox  />} value = "1" label="Falta de ingredientes"/>
+                        <FormControlLabel control={<Checkbox />}  value = "2" label="Falta de tiempo"/>
+                        <FormControlLabel control={<Checkbox  />} value = "3" label="Falta de claridad en las instrucciones"/>
+                        <FormControlLabel control={<Checkbox  />} value = "4" label="No le gusta cocinar"/>
+                        <FormControlLabel control={<Checkbox  />} value = "5" label="Otro"/>
                  </FormGroup>
                 </div>
                 
@@ -77,10 +77,10 @@ export class FifthPart extends Component {
                      ¿Cuáles son tus ocasiones preferidas para cocinar?
                     </label>
                     <FormGroup row arial-label="ocasiones_cocina" name="ocasiones_cocina" value={values.ocasiones_cocina} onChange={inputChangeArray('ocasiones_cocina')}>
-                        <FormControlLabel control={<Checkbox />} label="Cumpleaños"/>
-                        <FormControlLabel control={<Checkbox  />} label="Día de amor y amistad"/>
-                        <FormControlLabel control={<Checkbox  />} label="Navidad"/>
-                        <FormControlLabel control={<Checkbox  />} label="Día del padre o de la madre"/>
+                        <FormControlLabel control={<Checkbox />}   value = "1" label="Cumpleaños"/>
+                        <FormControlLabel control={<Checkbox  />}  value = "2" label="Día de amor y amistad"/>
+                        <FormControlLabel control={<Checkbox  />}  value = "3" label="Navidad"/>
+                        <FormControlLabel control={<Checkbox  />}  value = "4" label="Día del padre o de la madre"/>
                  </FormGroup>
                 </div>
                 <br />

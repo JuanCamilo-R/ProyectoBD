@@ -19,7 +19,7 @@ export class SixthPart extends Component {
 
 
     render() {
-        const { values, inputChange } = this.props;
+        const { values, inputChange, inputChangeArray } = this.props;
         return (
             <div className="form-container">
                 <div>
@@ -43,7 +43,7 @@ export class SixthPart extends Component {
                 <br/>
                 <div className="form-group form-design">
                     <label htmlFor="juego_videojuegos">
-                         ¿Escoja el juego que más le gusta o que más le llama la atención?
+                         Escoja el juego que más le gusta o que más le llama la atención
                     </label>
                     <div className="radio">
                         <RadioGroup row arial-label="juego_videojuegos" name="juego_videojuegos" value={values.juego_videojuegos} onChange={inputChange('juego_videojuegos')}>
@@ -87,18 +87,18 @@ export class SixthPart extends Component {
                     ¿Cuál categoría prefieres?
                     </label>
                     <FormGroup row arial-label="categoria_videojuegos" name="categoria_videojuegos" value={values.categoria_videojuegos} onChange={inputChangeArray('categoria_videojuegos')}>
-                        <FormControlLabel control={<Checkbox />} label="Juegos de rol"/>
-                        <FormControlLabel control={<Checkbox />} label="Juegos individuales"/>
-                        <FormControlLabel control={<Checkbox />} label="Juegos Multijugador"/>
-                        <FormControlLabel control={<Checkbox />} label="Juegos Deportivos"/>
-                        <FormControlLabel control={<Checkbox />} label="Realidad Virtual"/>
-                        <FormControlLabel control={<Checkbox />} label="Juegos de aventura"/>
-                        <FormControlLabel control={<Checkbox />} label="Juegos de estrategia"/>
-                        <FormControlLabel control={<Checkbox />} label="Juegos de mesa"/>
-                        <FormControlLabel control={<Checkbox />} label="Juegos de apuesta"/>
-                        <FormControlLabel control={<Checkbox />} label="Juegos de memoria"/>
-                        <FormControlLabel control={<Checkbox />} label="Juegos de celular"/>
-                        <FormControlLabel control={<Checkbox />} label="Juegos de carta"/>
+                        <FormControlLabel value = "1" control={<Checkbox />} label="Juegos de rol"/>
+                        <FormControlLabel value = "2" control={<Checkbox />} label="Juegos individuales"/>
+                        <FormControlLabel value = "3" control={<Checkbox />} label="Juegos Multijugador"/>
+                        <FormControlLabel value = "4" control={<Checkbox />} label="Juegos Deportivos"/>
+                        <FormControlLabel value = "5" control={<Checkbox />} label="Realidad Virtual"/>
+                        <FormControlLabel value = "6" control={<Checkbox />} label="Juegos de aventura"/>
+                        <FormControlLabel value = "7" control={<Checkbox />} label="Juegos de estrategia"/>
+                        <FormControlLabel value = "8" control={<Checkbox />} label="Juegos de mesa"/>
+                        <FormControlLabel value = "9" control={<Checkbox />} label="Juegos de apuesta"/>
+                        <FormControlLabel value = "10" control={<Checkbox />} label="Juegos de memoria"/>
+                        <FormControlLabel value = "11" control={<Checkbox />} label="Juegos de celular"/>
+                        <FormControlLabel value = "12" control={<Checkbox />} label="Juegos de carta"/>
 
                  </FormGroup>
                 </div>

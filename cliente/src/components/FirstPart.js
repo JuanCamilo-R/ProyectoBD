@@ -87,7 +87,7 @@ export class FirstPart extends Component {
                 <br/>
                 <div className = "form-group">
                     <label htmlFor="comuna">
-                        Comuna: (Digite solo el numero, sin letras)
+                        Comuna en la que vive: (Digite solo el numero, sin letras)
                     </label>
                     <input type = "number" className = "form-control" name = "comuna" onChange = {inputChange('comuna')} value = {values.comuna}/>
                 </div>

@@ -25,7 +25,7 @@ class Forms extends React.Component {
         atractivoPelicula: [],
         comida_favorita_pelicula: [],
         frecuencia_deporte: '',
-        deporte_favorito: '',
+        deporte_favorito: [],
         razon_deporte: [],
         razon_no_deporte: [],
         frecuencia_lectura: '',
