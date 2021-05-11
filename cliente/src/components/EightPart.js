@@ -21,17 +21,6 @@ export class EigthPart extends Component {
                 <h1 className="h1">Categoría de Evento</h1>
                 <p className = "remainder"> Puntue del 1 al 5, donde 1 es la frecuencia más baja y 5 la más alta </p>
                 </div>
-                <div className="form-group form-design">
-                    <label htmlFor="sector">
-                        Le gustaria llevar a su mascota al evento
-                    </label>
-                    <div className="radio">
-                        <RadioGroup row arial-label="sector" name="sector" /*value={values.sector}*/ onChange={inputChange('sector')}>
-                            <FormControlLabel  value="1" control={<Radio />} label="Si"/>
-                            <FormControlLabel  value="2" control={<Radio />} label="No" />
-                        </RadioGroup>
-                    </div>
-                </div>
                 <br/>
                 <div className="form-group form-design">
                     <label htmlFor="peliculasFrecuencia">
@@ -66,6 +55,18 @@ export class EigthPart extends Component {
                         <FormControlLabel type="text" value="4" control={<Radio />} label="Internet" />
                         <FormControlLabel type="text" value="5" control={<Radio />} label="Volante" />
                     </RadioGroup>
+                </div>
+                <br/>
+                <div className="form-group form-design">
+                    <label htmlFor="sector">
+                        Le gustaria llevar a su mascota al evento
+                    </label>
+                    <div className="radio">
+                        <RadioGroup row arial-label="sector" name="sector" /*value={values.sector}*/ onChange={inputChange('sector')}>
+                            <FormControlLabel  value="1" control={<Radio />} label="Si"/>
+                            <FormControlLabel  value="2" control={<Radio />} label="No" />
+                        </RadioGroup>
+                    </div>
                 </div>
                 <br/>
                 <div className="row">

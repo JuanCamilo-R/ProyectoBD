@@ -68,8 +68,8 @@ export class SecondPart extends Component {
                         De las siguientes opciones, ¿qué es lo que más le atrae de una película?
                     </label>
                     <FormGroup row arial-label="atractivoPelicula" name="atractivoPelicula" value={values.atractivoPelicula} onClick={(inputChangeArray('atractivoPelicula'))}>
-                        <FormControlLabel control={<Checkbox />} value="1" label="Sinopsis" />
-                        <FormControlLabel control={<Checkbox/>} value="2" label="Efectos visuales"/>
+                        <FormControlLabel control={<Checkbox />} value ="1" label="Sinopsis" />
+                        <FormControlLabel control={<Checkbox/>} value = "2" label="Efectos visuales"/>
                         <FormControlLabel control={<Checkbox />} value="3" label="Actores famosos"/>
                         <FormControlLabel control={<Checkbox />} value="4" label="Otro"/>
                         <FormControlLabel control={<Checkbox />} value="5" label="Ninguno"/>
