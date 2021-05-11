@@ -46,20 +46,20 @@ export class ForthPart extends Component {
                         ¿Cuál es su genero de lectura favorito?
                     </label>
                     <FormGroup row arial-label="genero_favorito_lectura" name="genero_favorito_lectura" value={values.genero_favorito_lectura} onChange={inputChangeArray('genero_favorito_lectura')}>
-                        <FormControlLabel control={<Checkbox  />} label="Fantasía"/>
-                        <FormControlLabel control={<Checkbox />} label="Ciencia ficción"/>
-                        <FormControlLabel control={<Checkbox  />} label="Aventuras"/>
-                        <FormControlLabel control={<Checkbox  />} label="Didácticos"/>
-                        <FormControlLabel control={<Checkbox  />} label="Paranormal"/>
-                        <FormControlLabel control={<Checkbox  />} label="Misterio"/>
-                        <FormControlLabel control={<Checkbox  />} label="Distopía"/>
-                        <FormControlLabel control={<Checkbox  />} label="Historia"/>
-                        <FormControlLabel control={<Checkbox  />} label="Biografía"/>
-                        <FormControlLabel control={<Checkbox  />} label="Religión"/>
-                        <FormControlLabel control={<Checkbox  />} label="Educación"/>
-                        <FormControlLabel control={<Checkbox  />} label="Poesía"/>
-                        <FormControlLabel control={<Checkbox  />} label="Desarrollo personal"/>
-                        <FormControlLabel control={<Checkbox  />} label="otro"/>
+                        <FormControlLabel value="1" control={<Checkbox  />} label="Fantasía"/>
+                        <FormControlLabel value="2" control={<Checkbox />} label="Ciencia ficción"/>
+                        <FormControlLabel value="3" control={<Checkbox  />} label="Aventuras"/>
+                        <FormControlLabel value="4" control={<Checkbox  />} label="Didácticos"/>
+                        <FormControlLabel value="5" control={<Checkbox  />} label="Paranormal"/>
+                        <FormControlLabel value="6" control={<Checkbox  />} label="Misterio"/>
+                        <FormControlLabel value="7" control={<Checkbox  />} label="Distopía"/>
+                        <FormControlLabel value="8" control={<Checkbox  />} label="Historia"/>
+                        <FormControlLabel value="9" control={<Checkbox  />} label="Biografía"/>
+                        <FormControlLabel value="10" control={<Checkbox  />} label="Religión"/>
+                        <FormControlLabel value="11" control={<Checkbox  />} label="Educación"/>
+                        <FormControlLabel value="12" control={<Checkbox  />} label="Poesía"/>
+                        <FormControlLabel value="13" control={<Checkbox  />} label="Desarrollo personal"/>
+                        <FormControlLabel value="14" control={<Checkbox  />} label="otro"/>
                  </FormGroup>
                 </div>
                 <br/>
@@ -80,13 +80,13 @@ export class ForthPart extends Component {
                         De los ultimos libros que has leído ¿en qué idioma estaban escritos?
                     </label>
                     <FormGroup row arial-label="idiomas_lectura" name="idiomas_lectura" value={values.idiomas_lectura} onChange={inputChangeArray('idiomas_lectura')}>
-                        <FormControlLabel control={<Checkbox />} label="Español"/>
-                        <FormControlLabel control={<Checkbox  />} label="Portugués"/>
-                        <FormControlLabel control={<Checkbox  />} label="Alemán"/>
-                        <FormControlLabel control={<Checkbox  />} label="Inglés"/>
-                        <FormControlLabel control={<Checkbox  />} label="Frances"/>
-                        <FormControlLabel control={<Checkbox  />} label="Italiano"/>
-                        <FormControlLabel control={<Checkbox  />} label="Otros"/>
+                        <FormControlLabel value="1" control={<Checkbox />} label="Español"/>
+                        <FormControlLabel value="2" control={<Checkbox  />} label="Portugués"/>
+                        <FormControlLabel value="3" control={<Checkbox  />} label="Alemán"/>
+                        <FormControlLabel value="4" control={<Checkbox  />} label="Inglés"/>
+                        <FormControlLabel value="5" control={<Checkbox  />} label="Frances"/>
+                        <FormControlLabel value="6" control={<Checkbox  />} label="Italiano"/>
+                        <FormControlLabel value="7" control={<Checkbox  />} label="Otros"/>
                  </FormGroup>
                 </div>
                 <br />

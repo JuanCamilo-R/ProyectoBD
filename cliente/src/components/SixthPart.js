@@ -61,17 +61,17 @@ export class SixthPart extends Component {
                      Generos de musica favoritos
                     </label>
                     <FormGroup row arial-label="genero_musica" name="genero_musica" value={values.genero_musica} onChange={inputChangeArray('genero_musica')}>
-                        <FormControlLabel control={<Checkbox />} label="Clásica"/>
-                        <FormControlLabel control={<Checkbox  />} label="Salsa"/>
-                        <FormControlLabel control={<Checkbox  />} label="Vallenato"/>
-                        <FormControlLabel control={<Checkbox  />} label="Bachata"/>
-                        <FormControlLabel control={<Checkbox  />} label="Popular"/>
-                        <FormControlLabel control={<Checkbox  />} label="Electrónica"/>
-                        <FormControlLabel control={<Checkbox  />} label="Merengue"/>
-                        <FormControlLabel control={<Checkbox  />} label="Rock"/>
-                        <FormControlLabel control={<Checkbox  />} label="Balada"/>
-                        <FormControlLabel control={<Checkbox  />} label="Pop"/>
-                        <FormControlLabel control={<Checkbox  />} label="Trap"/>
+                        <FormControlLabel value="1" control={<Checkbox />} label="Clásica"/>
+                        <FormControlLabel value="2" control={<Checkbox  />} label="Salsa"/>
+                        <FormControlLabel value="3"control={<Checkbox  />} label="Vallenato"/>
+                        <FormControlLabel value="4" control={<Checkbox  />} label="Bachata"/>
+                        <FormControlLabel value="5" control={<Checkbox  />} label="Popular"/>
+                        <FormControlLabel value="6" control={<Checkbox  />} label="Electrónica"/>
+                        <FormControlLabel value="7" control={<Checkbox  />} label="Merengue"/>
+                        <FormControlLabel value="8" control={<Checkbox  />} label="Rock"/>
+                        <FormControlLabel value="9" control={<Checkbox  />} label="Balada"/>
+                        <FormControlLabel value="10" control={<Checkbox  />} label="Pop"/>
+                        <FormControlLabel value="11" control={<Checkbox  />} label="Trap"/>
 
                  </FormGroup>
                 </div>
