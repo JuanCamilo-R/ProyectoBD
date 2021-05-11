@@ -19,7 +19,7 @@ export class FifthPart extends Component {
 
 
     render() {
-        const { values, inputChange } = this.props;
+        const { values, inputChange , inputChangeArray} = this.props;
         return (
             <div className="form-container">
                 <div>
@@ -27,11 +27,11 @@ export class FifthPart extends Component {
                 <p className = "remainder"> Puntue del 1 al 5, donde 1 es la frecuencia más baja y 5 la más alta </p>
                 </div>
                 <div className="form-group form-design">
-                    <label htmlFor="sector">
+                    <label htmlFor="frecuencia_cocina">
                         ¿Qué tanto le gusta cocinar y aprender recetas?
                     </label>
                     <div className="radio">
-                        <RadioGroup row arial-label="sector" name="sector" /*value={values.sector}*/ onChange={inputChange('sector')}>
+                        <RadioGroup row arial-label="frecuencia_cocina" name="frecuencia_cocina" value={values.frecuencia_cocina} onChange={inputChange('frecuencia_cocina')}>
                             <FormControlLabel  value="1" control={<Radio />} label="1" />
                             <FormControlLabel  value="2" control={<Radio />} label="2" />
                             <FormControlLabel  value="3" control={<Radio />} label="3" />
@@ -42,27 +42,27 @@ export class FifthPart extends Component {
                 </div>
                 <br/>
                 <div className="form-group form-design">
-                    <label htmlFor="deporteFrecuencia">
+                    <label htmlFor="comida_favorita_cocina">
                          ¿Cuál es el tipo de comida favorita que le gusta preparar?
                     </label>
-                    <RadioGroup row arial-label="deporteFrecuencia" name="deporteFrecuencia" value={values.deporteFrecuencia} onChange={inputChange('deporteFrecuencia')}>
+                    <RadioGroup row arial-label="comida_favorita_cocina" name="comida_favorita_cocina" value={values.comida_favorita_cocina} onChange={inputChange('comida_favorita_cocina')}>
                         <FormControlLabel type="text" value="1" control={<Radio />} label="Postres" />
                         <FormControlLabel type="text" value="2" control={<Radio />} label="Comida vegana" />
                         <FormControlLabel type="text" value="3" control={<Radio />} label="Sopas" />
                         <FormControlLabel type="text" value="4" control={<Radio />} label="Comidas rápidas" />
-                        <FormControlLabel type="text" value="4" control={<Radio />} label="Carnes" />
-                        <FormControlLabel type="text" value="4" control={<Radio />} label="Pescado" />
-                        <FormControlLabel type="text" value="4" control={<Radio />} label="Mariscos" />
-                        <FormControlLabel type="text" value="4" control={<Radio />} label="Pasta" />
-                        <FormControlLabel type="text" value="4" control={<Radio />} label="Otro" />
+                        <FormControlLabel type="text" value="5" control={<Radio />} label="Carnes" />
+                        <FormControlLabel type="text" value="6" control={<Radio />} label="Pescado" />
+                        <FormControlLabel type="text" value="7" control={<Radio />} label="Mariscos" />
+                        <FormControlLabel type="text" value="8" control={<Radio />} label="Pasta" />
+                        <FormControlLabel type="text" value="9" control={<Radio />} label="Otro"/>
                     </RadioGroup>
                 </div>
                 <br/>
                 <div className="form-group form-design">
-                    <label htmlFor="leerFrecuencia">
+                    <label htmlFor="dificultades_cocina">
                         ¿Cuál es el mayor problema para seguir las recetas?
                     </label>
-                    <FormGroup row arial-label="deporteFrecuencia" name="deporteFrecuencia" value={values.deporteFrecuencia} onChange={inputChange('deporteFrecuencia')}>
+                    <FormGroup row arial-label="dificultades_cocina" name="dificultades_cocina" value={values.dificultades_cocina} onChange={inputChangeArray('dificultades_cocina')}>
                         <FormControlLabel control={<Checkbox  />} label="Falta de ingredientes"/>
                         <FormControlLabel control={<Checkbox />} label="Falta de tiempo"/>
                         <FormControlLabel control={<Checkbox  />} label="Falta de claridad en las instrucciones"/>
@@ -73,10 +73,10 @@ export class FifthPart extends Component {
                 
                 <br/>
                 <div className="form-group form-design">
-                    <label htmlFor="leerFrecuencia">
+                    <label htmlFor="ocasiones_cocina">
                      ¿Cuáles son tus ocasiones preferidas para cocinar?
                     </label>
-                    <FormGroup row arial-label="deporteFrecuencia" name="deporteFrecuencia" value={values.deporteFrecuencia} onChange={inputChange('deporteFrecuencia')}>
+                    <FormGroup row arial-label="ocasiones_cocina" name="ocasiones_cocina" value={values.ocasiones_cocina} onChange={inputChangeArray('ocasiones_cocina')}>
                         <FormControlLabel control={<Checkbox />} label="Cumpleaños"/>
                         <FormControlLabel control={<Checkbox  />} label="Día de amor y amistad"/>
                         <FormControlLabel control={<Checkbox  />} label="Navidad"/>

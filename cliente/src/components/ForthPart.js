@@ -19,7 +19,7 @@ export class ForthPart extends Component {
 
 
     render() {
-        const { values, inputChange } = this.props;
+        const { values, inputChange ,inputChangeArray } = this.props;
         return (
             <div className="form-container">
                 <div>
@@ -27,11 +27,11 @@ export class ForthPart extends Component {
                 <p className = "remainder"> Puntue del 1 al 5, donde 1 es la frecuencia más baja y 5 la más alta </p>
                 </div>
                 <div className="form-group form-design">
-                    <label htmlFor="sector">
+                    <label htmlFor="frecuencia_lectura">
                         ¿Cuantas veces lee a la semana?
                     </label>
                     <div className="radio">
-                        <RadioGroup row arial-label="sector" name="sector" /*value={values.sector}*/ onChange={inputChange('sector')}>
+                        <RadioGroup row arial-label="frecuencia_lectura" name="frecuencia_lectura" value={values.frecuencia_lectura} onChange={inputChange('frecuencia_lectura')}>
                             <FormControlLabel  value="1" control={<Radio />} label="1" />
                             <FormControlLabel  value="2" control={<Radio />} label="2" />
                             <FormControlLabel  value="3" control={<Radio />} label="3" />
@@ -42,10 +42,10 @@ export class ForthPart extends Component {
                 </div>
                 <br/>
                 <div className="form-group form-design">
-                    <label htmlFor="leerFrecuencia">
+                    <label htmlFor="genero_favorito_lectura">
                         ¿Cuál es su genero de lectura favorito?
                     </label>
-                    <FormGroup row arial-label="deporteFrecuencia" name="deporteFrecuencia" value={values.deporteFrecuencia} onChange={inputChange('deporteFrecuencia')}>
+                    <FormGroup row arial-label="genero_favorito_lectura" name="genero_favorito_lectura" value={values.genero_favorito_lectura} onChange={inputChangeArray('genero_favorito_lectura')}>
                         <FormControlLabel control={<Checkbox  />} label="Fantasía"/>
                         <FormControlLabel control={<Checkbox />} label="Ciencia ficción"/>
                         <FormControlLabel control={<Checkbox  />} label="Aventuras"/>
@@ -64,10 +64,10 @@ export class ForthPart extends Component {
                 </div>
                 <br/>
                 <div className="form-group form-design">
-                    <label htmlFor="deporteFrecuencia">
+                    <label htmlFor="adquiere_frecuencia_lectura">
                          ¿Cada cuanto adquiere nuevos libros?
                     </label>
-                    <RadioGroup row arial-label="deporteFrecuencia" name="deporteFrecuencia" value={values.deporteFrecuencia} onChange={inputChange('deporteFrecuencia')}>
+                    <RadioGroup row arial-label="adquiere_frecuencia_lectura" name="adquiere_frecuencia_lectura" value={values.adquiere_frecuencia_lectura} onChange={inputChange('adquiere_frecuencia_lectura')}>
                         <FormControlLabel type="text" value="1" control={<Radio />} label="Cada semana" />
                         <FormControlLabel type="text" value="2" control={<Radio />} label="Cada mes" />
                         <FormControlLabel type="text" value="3" control={<Radio />} label="Una vez al año" />
@@ -76,10 +76,10 @@ export class ForthPart extends Component {
                 </div>
                 <br/>
                 <div className="form-group form-design">
-                    <label htmlFor="leerFrecuencia">
+                    <label htmlFor="idiomas_lectura">
                         De los ultimos libros que has leído ¿en qué idioma estaban escritos?
                     </label>
-                    <FormGroup row arial-label="deporteFrecuencia" name="deporteFrecuencia" value={values.deporteFrecuencia} onChange={inputChange('deporteFrecuencia')}>
+                    <FormGroup row arial-label="idiomas_lectura" name="idiomas_lectura" value={values.idiomas_lectura} onChange={inputChangeArray('idiomas_lectura')}>
                         <FormControlLabel control={<Checkbox />} label="Español"/>
                         <FormControlLabel control={<Checkbox  />} label="Portugués"/>
                         <FormControlLabel control={<Checkbox  />} label="Alemán"/>
