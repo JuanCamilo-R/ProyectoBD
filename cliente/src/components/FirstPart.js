@@ -85,6 +85,15 @@ export class FirstPart extends Component {
                     </div>
                 </div>
                 <br/>
+
+                <div className = "form-group">
+                    <label htmlFor="Color">
+                        Color favorito:
+                    </label>
+                    <input type = "text" className = "form-control" name = "color" onChange = {inputChange('color')} value = {values.color}/>
+                </div>
+                <br />
+
                 <div className = "form-group">
                     <label htmlFor="comuna">
                         Comuna en la que vive: (Digite solo el numero, sin letras)

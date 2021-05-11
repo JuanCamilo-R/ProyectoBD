@@ -68,6 +68,7 @@ class Forms extends React.Component {
 
 
     inputChangeArray = category => event => {
+        
         const target = event.target;
         var value = target.value;
 
