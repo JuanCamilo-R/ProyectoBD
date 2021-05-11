@@ -17,8 +17,20 @@ class Forms extends React.Component {
         apellido: '',
         edad: '',
         genero: '',
+        hijos_si_no: '',
+        color: '',
         comuna: '',
-        atractivoPelicula: []
+        frecuencia_pelicula: '',
+        genero_favorito_pelicula: [],
+        atractivoPelicula: [],
+        comida_favorita_pelicula: [],
+        frecuencia_deporte: '',
+        deporte_favorito: '',
+        razon_deporte: [],
+        razon_no_deporte: [],
+        frecuencia_lectura: '',
+        genero_favorito_lectura: '',
+
     };
 
     nextStep = () => {
@@ -37,14 +49,17 @@ class Forms extends React.Component {
         })
     };
 
+
     inputChangeArray = category => event => {
         const target = event.target;
         var value = target.value;
+
         console.log(category);
         if(target.checked){
             this.state.atractivoPelicula.push(value);
         }else{
-            this.state.category.splice(value, 1);
+            var index = this.state.atractivoPelicula.indexOf(value);
+            this.state.atractivoPelicula.splice(index, 1);
         };
     }
 
@@ -52,12 +67,12 @@ class Forms extends React.Component {
 
         const { step } = this.state;
         const { cedula, nombre, apellido, edad, genero, comuna, barrio, sector, peliculasFrecuencia,
-            deporteFrecuencia, leerFrecuencia, cocinarFrecuencia, eventosFrecuencia, conciertoFrecuencia,
+            deporteFrecuencia, leerFrecuencia,atractivoPelicula, cocinarFrecuencia, eventosFrecuencia, conciertoFrecuencia,
             color, mesPreferencia, ocupacion, deportivosFrecuencia } = this.state;
         const values = {
             cedula, nombre, apellido, edad, genero, comuna, barrio,sector, peliculasFrecuencia,
             deporteFrecuencia, leerFrecuencia, cocinarFrecuencia, eventosFrecuencia, conciertoFrecuencia,
-            color, mesPreferencia, ocupacion, deportivosFrecuencia
+            color, mesPreferencia, ocupacion, deportivosFrecuencia, atractivoPelicula
         };
         switch (step) {
             case 1:
