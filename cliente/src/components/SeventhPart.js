@@ -19,7 +19,7 @@ export class SixthPart extends Component {
 
 
     render() {
-        const { values, inputChange } = this.props;
+        const { values, inputChange, inputChangeArray } = this.props;
         return (
             <div className="form-container">
                 <div>
