@@ -24,7 +24,7 @@ export class FirstPart extends Component {
                     <label htmlFor="cedula">
                         Cédula:
                     </label>
-                <input  type = "text" className = "form-control" name = "cedula" onChange = {inputChange('nombre')} value = {values.cedula}/>
+                <input  type = "text" className = "form-control" name = "cedula" onChange = {inputChange('cedula')} value = {values.cedula}/>
                 </div>
                 <br/>
                 <div className="form-group">
@@ -78,7 +78,7 @@ export class FirstPart extends Component {
                         ¿Tiene hijos?
                     </label>
                     <div className="radio">
-                        <RadioGroup aria-label="gender" name="gender1" value={values.genero} onChange={inputChange('genero')}>
+                        <RadioGroup aria-label="gender" name="gender1" value={values.hijos_si_no} onChange={inputChange('hijos_si_no')}>
                             <FormControlLabel value="Si" control={<Radio/>} label="Si" />
                             <FormControlLabel value="No" control={<Radio/>} label="No"/>
                         </RadioGroup>
@@ -89,7 +89,7 @@ export class FirstPart extends Component {
                     <label htmlFor="comuna">
                         Comuna: (Digite solo el numero, sin letras)
                     </label>
-                    <input type = "text" className = "form-control" name = "comuna" onChange = {inputChange('comuna')} value = {values.comuna}/>
+                    <input type = "number" className = "form-control" name = "comuna" onChange = {inputChange('comuna')} value = {values.comuna}/>
                 </div>
                 <br />
 

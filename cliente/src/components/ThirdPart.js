@@ -17,7 +17,7 @@ export class ThirdPart extends Component {
 
 
     render() {
-        const { values, inputChange } = this.props;
+        const { values, inputChange, inputChangeArray } = this.props;
         return (
             <div className="form-container">
                 <div>
@@ -26,11 +26,11 @@ export class ThirdPart extends Component {
                 </div>
                 <div className="form-group form-design">
                 
-                <label htmlFor="Frecuencia Deportivos">
+                <label htmlFor="frecuencia_deporte">
                         ¿Con qué frecuencia practica algún deporte?
                     </label>        
                     <div className="radio">           
-                        <RadioGroup row  aria-label="deportivosFrecuencia" name="deportivosFrecuencia" value={values.deportivosFrecuencia} onChange={inputChange('peliculasFrecuencia')}>
+                        <RadioGroup row  aria-label="frecuencia_deporte" name="frecuencia_deporte" value={values.frecuencia_deporte} onChange={inputChange('frecuencia_deporte')}>
                             <FormControlLabel type="number" value="1" control={<Radio />} label="1"/>
                             <FormControlLabel type="number" value="2" control={<Radio />} label="2"/>
                             <FormControlLabel type="number" value="3" control={<Radio />} label="3"/>
@@ -41,50 +41,50 @@ export class ThirdPart extends Component {
                 </div>
                 <br/>
                 <div className="form-group form-design">
-                    <label htmlFor="deporteFrecuencia">
+                    <label htmlFor="deporte_favorito">
                     Independientemente de su respuesta arriba, ¿cuál es su deporte favorito?
                     </label>
-                    <FormGroup row arial-label="atractivoPelicula" name="atractivoPelicula" value={values.atractivoPelicula} onChange={inputChange('peliculasFrecuencia')}>
+                    <FormGroup row arial-label="deporte_favorito" name="deporte_favorito" value={values.deporte_favorito} onChange={inputChangeArray('deporte_favorito')}>
                         <FormControlLabel control={<Checkbox />} value="1" label="Fútbol" />
                         <FormControlLabel control={<Checkbox/>} value="2" label="Baloncesto"/>
                         <FormControlLabel control={<Checkbox />} value="3" label="Crossfit"/>
                         <FormControlLabel control={<Checkbox />} value="4" label="Voleibol"/>
                         <FormControlLabel control={<Checkbox />} value="5" label="Patinaje"/>
-                        <FormControlLabel control={<Checkbox />} value="5" label="Natación"/>
-                        <FormControlLabel control={<Checkbox />} value="5" label="Ciclismo"/>
-                        <FormControlLabel control={<Checkbox />} value="5" label="Ping Pong"/>
-                        <FormControlLabel control={<Checkbox />} value="5" label="Tenis"/>
-                        <FormControlLabel control={<Checkbox />} value="5" label="Rugby"/>
-                        <FormControlLabel control={<Checkbox />} value="5" label="Otro"/>
-                        <FormControlLabel control={<Checkbox />} value="5" label="Ninguno"/>
-                        <FormControlLabel control={<Checkbox />} value="5" label="Ajedrez"/>
+                        <FormControlLabel control={<Checkbox />} value="6" label="Natación"/>
+                        <FormControlLabel control={<Checkbox />} value="7" label="Ciclismo"/>
+                        <FormControlLabel control={<Checkbox />} value="8" label="Ping Pong"/>
+                        <FormControlLabel control={<Checkbox />} value="9" label="Tenis"/>
+                        <FormControlLabel control={<Checkbox />} value="10" label="Rugby"/>
+                        <FormControlLabel control={<Checkbox />} value="11" label="Otro"/>
+                        <FormControlLabel control={<Checkbox />} value="12" label="Ninguno"/>
+                        <FormControlLabel control={<Checkbox />} value="13" label="Ajedrez"/>
                     </FormGroup>
                 </div>
                 <br/>
                 <div className="form-group form-design">
-                    <label htmlFor="deporteFrecuencia">
+                    <label htmlFor="razon_deporte">
                     ¿Cuál es la razón por la que practica deporte? 
                     </label>
-                    <FormGroup row arial-label="atractivoPelicula" name="atractivoPelicula" value={values.atractivoPelicula} onChange={inputChange('peliculasFrecuencia')}>
-                        <FormControlLabel control={<Checkbox />} value="1" label="Lo disfruto" />
-                        <FormControlLabel control={<Checkbox/>} value="2" label="Por salud"/>
-                        <FormControlLabel control={<Checkbox />} value="3" label="Para verme bien"/>
-                        <FormControlLabel control={<Checkbox />} value="4" label="Otra"/>
-                        <FormControlLabel control={<Checkbox />} value="5" label="No aplica"/>
+                    <FormGroup row arial-label="razon_deporte" name="razon_deporte" value={values.razon_deporte} onChange={inputChangeArray('razon_deporte')}>
+                        <FormControlLabel control={<Checkbox />} value = "1" label="Lo disfruto" />
+                        <FormControlLabel control={<Checkbox/>}  value = "2" label="Por salud"/>
+                        <FormControlLabel control={<Checkbox />} value = "3" label="Para verme bien"/>
+                        <FormControlLabel control={<Checkbox />} value = "4" label="Otra"/>
+                        <FormControlLabel control={<Checkbox />} value = "5" label="No aplica"/>
                     </FormGroup>
                 </div>
                 <br/>
                 <div className="form-group form-design">
-                    <label htmlFor="deporteFrecuencia">
+                    <label htmlFor="razon_no_deporte">
                     ¿Cuál es la razón por la que NO practica deporte?  
                     </label>
-                    <FormGroup row arial-label="atractivoPelicula" name="atractivoPelicula" value={values.atractivoPelicula} onChange={inputChange('peliculasFrecuencia')}>
-                        <FormControlLabel control={<Checkbox />} value="1" label="Falta de tiempo" />
-                        <FormControlLabel control={<Checkbox/>} value="2" label="Falta de iniciativa"/>
-                        <FormControlLabel control={<Checkbox />} value="3" label="Falta de compañía"/>
-                        <FormControlLabel control={<Checkbox />} value="4" label="No le gusta"/>
-                        <FormControlLabel control={<Checkbox />} value="5" label="Otra"/>
-                        <FormControlLabel control={<Checkbox />} value="5" label="No aplica"/>
+                    <FormGroup row arial-label="razon_no_deporte" name="razon_no_deporte" value={values.razon_no_deporte} onChange={inputChangeArray('razon_no_deporte')}>
+                        <FormControlLabel control={<Checkbox />} value = "1" label="Falta de tiempo" />
+                        <FormControlLabel control={<Checkbox/>}  value = "2" label="Falta de iniciativa"/>
+                        <FormControlLabel control={<Checkbox />} value = "3" label="Falta de compañía"/>
+                        <FormControlLabel control={<Checkbox />} value = "4" label="No le gusta"/>
+                        <FormControlLabel control={<Checkbox />} value = "5" label="Otra"/>
+                        <FormControlLabel control={<Checkbox />} value = "6" label="No aplica"/>
                     </FormGroup>
                 </div>
                 <br/>
