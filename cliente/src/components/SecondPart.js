@@ -77,18 +77,18 @@ export class SecondPart extends Component {
                 </div>
                 <br />
                 <div className="form-group form-design">
-                    <label htmlFor="leerFrecuencia">
+                    <label htmlFor="deporteFrecuencia">
                         ¿Usualmente con qué acompaña las películas?
                     </label>
-                    <RadioGroup row arial-label="leerFrecuencia" name="leerFrecuencia" value={values.leerFrecuencia} onChange={inputChange('leerFrecuencia')}>
-                        <FormControlLabel type="number" value="1" control={<Radio />} label="Crispetas" />
-                        <FormControlLabel type="number" value="2" control={<Radio />} label="Nachos" />
-                        <FormControlLabel type="number" value="3" control={<Radio />} label="Perro caliente" />
-                        <FormControlLabel type="number" value="4" control={<Radio />} label="Hamburguesa" />
-                        <FormControlLabel type="number" value="5" control={<Radio />} label="Papas fritas" />
-                        <FormControlLabel type="number" value="5" control={<Radio />} label="Otro" />
-                        <FormControlLabel type="number" value="5" control={<Radio />} label="Ninguno" />
-                    </RadioGroup>
+                    <FormGroup row arial-label="atractivoPelicula" name="atractivoPelicula" value={values.atractivoPelicula} onClick={(inputChangeArray('atractivoPelicula'))}>
+                        <FormControlLabel control={<Checkbox />} value="1" label="Crispetas" />
+                        <FormControlLabel control={<Checkbox/>} value="2" label="Nachos"/>
+                        <FormControlLabel control={<Checkbox />} value="3" label="Perro caliente"/>
+                        <FormControlLabel control={<Checkbox />} value="4" label="Hamburguesa"/>
+                        <FormControlLabel control={<Checkbox />} value="5" label="Papas fritas"/>
+                        <FormControlLabel control={<Checkbox />} value="5" label="Otro"/>
+                        <FormControlLabel control={<Checkbox />} value="5" label="Ninguno"/>
+                    </FormGroup>
                 </div>
                 <br />
                 <div className="row">
