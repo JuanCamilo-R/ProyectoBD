@@ -16,6 +16,7 @@ class Forms extends React.Component {
         nombre: '',
         apellido: '',
         edad: '',
+        ocupacion: '',
         genero: '',
         hijos_si_no: '',
         color: '',

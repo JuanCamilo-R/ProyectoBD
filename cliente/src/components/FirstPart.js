@@ -49,11 +49,11 @@ export class FirstPart extends Component {
                 </div>
                 <br/>
                 <div className="form-group">
-                    <label htmlFor="edad">
+                    <label htmlFor="ocupacion">
                         Ocupacion:
                     </label>
                     <div className="radio">
-                        <RadioGroup aria-label="gender" name="gender1" value={values.genero} onChange={inputChange('genero')}>
+                        <RadioGroup aria-label="ocupacion" name="ocupacion" value={values.ocupacion} onChange={inputChange('ocupacion')}>
                             <FormControlLabel value="Femenino" control={<Radio/>} label="Estudia" />
                             <FormControlLabel value="Masculino" control={<Radio/>} label="Trabaja"/>
                             <FormControlLabel value="Desempleado" control={<Radio/>} label="Desempleado"/>
@@ -66,9 +66,9 @@ export class FirstPart extends Component {
                         Genero:
                     </label>
                     <div className="radio">
-                        <RadioGroup aria-label="gender" name="gender1" value={values.genero} onChange={inputChange('genero')}>
-                            <FormControlLabel value="Femenino" control={<Radio/>} label="Femenino" />
-                            <FormControlLabel value="Masculino" control={<Radio/>} label="Masculino"/>
+                        <RadioGroup aria-label="genero" name="genero" value={values.genero} onChange={inputChange('genero')}>
+                            <FormControlLabel value="1" control={<Radio/>} label="Masculino" />
+                            <FormControlLabel value="2" control={<Radio/>} label="Femenino"/>
                         </RadioGroup>
                     </div>
                 </div>

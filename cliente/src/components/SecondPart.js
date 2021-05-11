@@ -35,7 +35,7 @@ export class SecondPart extends Component {
                         ¿Qué tan frecuente ve películas?
                     </label>
                     <div className="radio">
-                        <RadioGroup row arial-label="frecuencia_pelicula" name="frecuencia_pelicula"  onChange={inputChange('frecuencia_pelicula')}>
+                        <RadioGroup row arial-label="frecuencia_pelicula" name="frecuencia_pelicula" value={values.frecuencia_pelicula} onChange={inputChange('frecuencia_pelicula')}>
                             <FormControlLabel value="1" control={<Radio />} label="1" />
                             <FormControlLabel value="2" control={<Radio />} label="2" />
                             <FormControlLabel value="3" control={<Radio />} label="3" />
