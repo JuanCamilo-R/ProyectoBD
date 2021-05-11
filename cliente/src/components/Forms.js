@@ -110,29 +110,29 @@ class Forms extends React.Component {
                 );
             case 3:
                 return(
-                    <ThirdPart nextStep = {this.nextStep} prevStep = {this.prevStep} inputChange = {this.inputChange} values = {values}/>
+                    <ThirdPart nextStep = {this.nextStep} prevStep = {this.prevStep} inputChange = {this.inputChange} values = {values} inputChangeArray = {this.inputChangeArray}/>
                  );
             case 4:
                 return (
-                    <ForthPart nextStep={this.nextStep} prevStep={this.prevStep} inputChange={this.inputChange} values={values} />
+                    <ForthPart nextStep={this.nextStep} prevStep={this.prevStep} inputChange={this.inputChange} values={values} inputChangeArray = {this.inputChangeArray}/>
                );
 
                case 5:
                 return (
-                    <FifthPart nextStep={this.nextStep} prevStep={this.prevStep} inputChange={this.inputChange} values={values} />
+                    <FifthPart nextStep={this.nextStep} prevStep={this.prevStep} inputChange={this.inputChange} values={values} inputChangeArray = {this.inputChangeArray}/>
                );
                case 6:
                 return (
-                    <SixthPart nextStep={this.nextStep} prevStep={this.prevStep} inputChange={this.inputChange} values={values} />
+                    <SixthPart nextStep={this.nextStep} prevStep={this.prevStep} inputChange={this.inputChange} values={values} inputChangeArray = {this.inputChangeArray} />
                );
 
                case 7:
                 return (
-                    <SeventhPart nextStep={this.nextStep} prevStep={this.prevStep} inputChange={this.inputChange} values={values} />
+                    <SeventhPart nextStep={this.nextStep} prevStep={this.prevStep} inputChange={this.inputChange} values={values} inputChangeArray = {this.inputChangeArray} />
                );
                case 8:
                 return (
-                    <EightPart nextStep={this.nextStep} prevStep={this.prevStep} inputChange={this.inputChange} values={values} />
+                    <EightPart nextStep={this.nextStep} prevStep={this.prevStep} inputChange={this.inputChange} values={values} inputChangeArray = {this.inputChangeArray} />
                );
 
         }

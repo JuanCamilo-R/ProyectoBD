@@ -3,7 +3,7 @@ import './styles/Badge.css';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-
+import { Checkbox, FormGroup } from '@material-ui/core';
 
 export class ThirdPart extends Component {
     continue = e => {
@@ -30,7 +30,7 @@ export class ThirdPart extends Component {
                         ¿Con qué frecuencia practica algún deporte?
                     </label>        
                     <div className="radio">           
-                        <RadioGroup row  aria-label="deportivosFrecuencia" name="deportivosFrecuencia" value={values.deportivosFrecuencia} onChange={inputChange('deporteFrecuencia')}>
+                        <RadioGroup row  aria-label="deportivosFrecuencia" name="deportivosFrecuencia" value={values.deportivosFrecuencia} onChange={inputChange('peliculasFrecuencia')}>
                             <FormControlLabel type="number" value="1" control={<Radio />} label="1"/>
                             <FormControlLabel type="number" value="2" control={<Radio />} label="2"/>
                             <FormControlLabel type="number" value="3" control={<Radio />} label="3"/>
@@ -44,7 +44,7 @@ export class ThirdPart extends Component {
                     <label htmlFor="deporteFrecuencia">
                     Independientemente de su respuesta arriba, ¿cuál es su deporte favorito?
                     </label>
-                    <FormGroup row arial-label="atractivoPelicula" name="atractivoPelicula" value={values.atractivoPelicula} onClick={(inputChangeArray('atractivoPelicula'))}>
+                    <FormGroup row arial-label="atractivoPelicula" name="atractivoPelicula" value={values.atractivoPelicula} onChange={inputChange('peliculasFrecuencia')}>
                         <FormControlLabel control={<Checkbox />} value="1" label="Fútbol" />
                         <FormControlLabel control={<Checkbox/>} value="2" label="Baloncesto"/>
                         <FormControlLabel control={<Checkbox />} value="3" label="Crossfit"/>
@@ -65,7 +65,7 @@ export class ThirdPart extends Component {
                     <label htmlFor="deporteFrecuencia">
                     ¿Cuál es la razón por la que practica deporte? 
                     </label>
-                    <FormGroup row arial-label="atractivoPelicula" name="atractivoPelicula" value={values.atractivoPelicula} onClick={(inputChangeArray('atractivoPelicula'))}>
+                    <FormGroup row arial-label="atractivoPelicula" name="atractivoPelicula" value={values.atractivoPelicula} onChange={inputChange('peliculasFrecuencia')}>
                         <FormControlLabel control={<Checkbox />} value="1" label="Lo disfruto" />
                         <FormControlLabel control={<Checkbox/>} value="2" label="Por salud"/>
                         <FormControlLabel control={<Checkbox />} value="3" label="Para verme bien"/>
@@ -78,7 +78,7 @@ export class ThirdPart extends Component {
                     <label htmlFor="deporteFrecuencia">
                     ¿Cuál es la razón por la que NO practica deporte?  
                     </label>
-                    <FormGroup row arial-label="atractivoPelicula" name="atractivoPelicula" value={values.atractivoPelicula} onClick={(inputChangeArray('atractivoPelicula'))}>
+                    <FormGroup row arial-label="atractivoPelicula" name="atractivoPelicula" value={values.atractivoPelicula} onChange={inputChange('peliculasFrecuencia')}>
                         <FormControlLabel control={<Checkbox />} value="1" label="Falta de tiempo" />
                         <FormControlLabel control={<Checkbox/>} value="2" label="Falta de iniciativa"/>
                         <FormControlLabel control={<Checkbox />} value="3" label="Falta de compañía"/>
