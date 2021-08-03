@@ -16,12 +16,10 @@ export class SecondPart extends Component {
 	};
 
 	show = () => {
-		console.log(this.props.values.atractivoPelicula);
+		console.log(this.props.this.props.values.data.atractivoPelicula);
 	};
 
 	render() {
-		const { values, inputChange, inputChangeArray } = this.props;
-
 		return (
 			<div className="form-container">
 				<div>
@@ -40,8 +38,8 @@ export class SecondPart extends Component {
 							row
 							arial-label="frecuencia_pelicula"
 							name="frecuencia_pelicula"
-							value={values.frecuencia_pelicula}
-							onChange={this.props.inputChange}
+							value={this.props.values.data.string_values.frecuencia_pelicula}
+							onChange={this.props.inputStringChange}
 						>
 							<FormControlLabel value="1" control={<Radio />} label="1" />
 							<FormControlLabel value="2" control={<Radio />} label="2" />
@@ -62,8 +60,10 @@ export class SecondPart extends Component {
 							row
 							arial-label="genero_favorito_pelicula"
 							name="genero_favorito_pelicula"
-							value={values.genero_favorito_pelicula}
-							onChange={this.props.inputChange}
+							value={
+								this.props.values.data.string_values.genero_favorito_pelicula
+							}
+							onChange={this.props.inputStringChange}
 						>
 							<FormControlLabel
 								type="number"
@@ -125,8 +125,8 @@ export class SecondPart extends Component {
 						row
 						arial-label="atractivoPelicula"
 						name="atractivoPelicula"
-						//value={this.props.values.data.array_values.atractivoPelicula}
-						onChange={this.props.inputChange}
+						value={this.props.values.data.array_values.atractivoPelicula}
+						onChange={this.props.inputArrayChange}
 					>
 						<FormControlLabel
 							control={<Checkbox />}
@@ -169,35 +169,50 @@ export class SecondPart extends Component {
 						row
 						arial-label="comida_favorita_pelicula"
 						name="comida_favorita_pelicula"
-						value={values.comida_favorita_pelicula}
-						onChange={this.props.inputChange}
+						value={this.props.values.data.array_values.comida_favorita_pelicula}
+						onChange={this.props.inputArrayChange}
 					>
 						<FormControlLabel
 							control={<Checkbox />}
 							value="1"
 							label="Crispetas"
+							name="comida_favorita_pelicula"
 						/>
-						<FormControlLabel control={<Checkbox />} value="2" label="Nachos" />
+						<FormControlLabel
+							control={<Checkbox />}
+							value="2"
+							label="Nachos"
+							name="comida_favorita_pelicula"
+						/>
 						<FormControlLabel
 							control={<Checkbox />}
 							value="3"
 							label="Perro caliente"
+							name="comida_favorita_pelicula"
 						/>
 						<FormControlLabel
 							control={<Checkbox />}
 							value="4"
 							label="Hamburguesa"
+							name="comida_favorita_pelicula"
 						/>
 						<FormControlLabel
 							control={<Checkbox />}
 							value="5"
 							label="Papas fritas"
+							name="comida_favorita_pelicula"
 						/>
-						<FormControlLabel control={<Checkbox />} value="6" label="Otro" />
+						<FormControlLabel
+							control={<Checkbox />}
+							value="6"
+							name="comida_favorita_pelicula"
+							label="Otro"
+						/>
 						<FormControlLabel
 							control={<Checkbox />}
 							value="7"
 							label="Ninguno"
+							name="comida_favorita_pelicula"
 						/>
 					</FormGroup>
 				</div>

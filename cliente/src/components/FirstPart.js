@@ -24,7 +24,7 @@ export class FirstPart extends Component {
 						type="text"
 						className="form-control"
 						name="cedula"
-						onChange={this.props.inputChange}
+						onChange={this.props.inputStringChange}
 						value={this.props.values.data.string_values.cedula}
 					/>
 				</div>
@@ -35,7 +35,7 @@ export class FirstPart extends Component {
 						type="text"
 						className="form-control"
 						name="nombre"
-						onChange={this.props.inputChange}
+						onChange={this.props.inputStringChange}
 						value={this.props.values.data.string_values.nombre}
 					/>
 				</div>
@@ -46,7 +46,7 @@ export class FirstPart extends Component {
 						type="text"
 						className="form-control"
 						name="apellido"
-						onChange={this.props.inputChange}
+						onChange={this.props.inputStringChange}
 						value={this.props.values.data.string_values.apellido}
 					/>
 				</div>
@@ -57,7 +57,7 @@ export class FirstPart extends Component {
 						type="text"
 						className="form-control"
 						name="edad"
-						onChange={this.props.inputChange}
+						onChange={this.props.inputStringChange}
 						value={this.props.values.data.string_values.edad}
 					/>
 				</div>
@@ -69,7 +69,7 @@ export class FirstPart extends Component {
 							aria-label="ocupacion"
 							name="ocupacion"
 							value={this.props.values.data.string_values.ocupacion}
-							onChange={this.props.inputChange}
+							onChange={this.props.inputStringChange}
 						>
 							<FormControlLabel
 								value="1"
@@ -97,7 +97,7 @@ export class FirstPart extends Component {
 							aria-label="genero"
 							name="genero"
 							value={this.props.values.data.string_values.genero}
-							onChange={this.props.inputChange}
+							onChange={this.props.inputStringChange}
 						>
 							<FormControlLabel
 								value="1"
@@ -114,13 +114,13 @@ export class FirstPart extends Component {
 				</div>
 				<br />
 				<div className="form-group form-design">
-					<label htmlFor="genero">¿Tiene hijos?</label>
+					<label htmlFor="hijos_si_no">¿Tiene hijos?</label>
 					<div className="radio">
 						<RadioGroup
-							aria-label="gender"
-							name="gender1"
+							aria-label="hijos_si_no"
+							name="hijos_si_no"
 							value={this.props.values.data.string_values.hijos_si_no}
-							onChange={this.props.inputChange}
+							onChange={this.props.inputStringChange}
 						>
 							<FormControlLabel value="Si" control={<Radio />} label="Si" />
 							<FormControlLabel value="No" control={<Radio />} label="No" />
@@ -135,7 +135,7 @@ export class FirstPart extends Component {
 						type="text"
 						className="form-control"
 						name="color"
-						onChange={this.props.inputChange}
+						onChange={this.props.inputStringChange}
 						value={this.props.values.data.string_values.color}
 					/>
 				</div>
@@ -149,7 +149,7 @@ export class FirstPart extends Component {
 						type="number"
 						className="form-control"
 						name="comuna"
-						onChange={this.props.inputChange}
+						onChange={this.props.inputStringChange}
 						value={this.props.values.data.string_values.comuna}
 					/>
 				</div>
