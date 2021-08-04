@@ -121,7 +121,9 @@ export class SecondPart extends Component {
 					<label htmlFor="atractivoPelicula">
 						De las siguientes opciones, escoja lo que le atrae de una película.
 					</label>
-					<FormGroup
+
+					<input type="checkbox" name="firstCheck" />
+					{/* <FormGroup
 						row
 						arial-label="atractivoPelicula"
 						name="atractivoPelicula"
@@ -158,7 +160,7 @@ export class SecondPart extends Component {
 							value="5"
 							label="Ninguno"
 						/>
-					</FormGroup>
+					</FormGroup> */}
 				</div>
 				<br />
 				<div className="form-group form-design">
