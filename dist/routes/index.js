@@ -6,5 +6,6 @@ const index_controller_1 = require("../controllers/index.controller");
 const router = express_1.Router();
 exports.router = router;
 router.get("/consultar", index_controller_1.getUser);
-router.post("/actualizadatos", index_controller_1.createUser);
+router.post("/crear", index_controller_1.createUser);
 router.delete("/borrar/:id", index_controller_1.deleteUser);
+router.put("/actualizar", index_controller_1.updateUser);

@@ -8,8 +8,10 @@ const bodyParser = require("body-parser");
 const index_1 = require("./routes/index");
 const PORT = 5000;
 const app = express_1.default();
+const mountRoutes = require("./routes");
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: false }));
 //EndPoints
-app.use(index_1.router);
+//app.use(router);
+app.use("/database", index_1.router);
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

@@ -154,11 +154,13 @@ export class ThirdPart extends Component {
 							control={<Checkbox />}
 							value="12"
 							label="Ninguno"
+							name="deporte_favorito"
 						/>
 						<FormControlLabel
 							control={<Checkbox />}
 							value="13"
 							label="Ajedrez"
+							name="deporte_favorito"
 						/>
 					</FormGroup>
 				</div>

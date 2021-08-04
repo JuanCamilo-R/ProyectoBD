@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.deleteUser = exports.createUser = exports.getUser = void 0;
+exports.updateUser = exports.deleteUser = exports.createUser = exports.getUser = void 0;
 const pg_1 = require("pg");
 const pool = new pg_1.Pool({
     connectionString: "postgres://rcdwvckhhgkbgc:7e78409ef8f599f449fe4290bac69d16c71b33dca005b90f0bb9f6296aeae62c@ec2-54-166-167-192.compute-1.amazonaws.com:5432/d5iiden0sct2v9",
@@ -40,3 +40,10 @@ const deleteUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
     res.send("BORRADO OK !!!");
 });
 exports.deleteUser = deleteUser;
+const updateUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const { name } = req.body;
+    res.send({
+        name,
+    });
+});
+exports.updateUser = updateUser;

@@ -1,5 +1,7 @@
 import { Request, Response } from "express";
 import { Pool } from "pg";
+import { Array_values } from "../interfaces/array_values.interface";
+import { String_values } from "../interfaces/string_values.interface";
 
 const pool = new Pool({
 	connectionString:
@@ -18,13 +20,20 @@ const getUser = async (req: Request, res: Response) => {
 };
 
 const createUser = async (req: Request, res: Response) => {
-	const { name, email } = req.body;
-	const response = await pool.query(
-		`INSERT INTO tabla_prueba(name, email) VALUES('${name}', '${email}')`
-	);
-	res.send({
-		message: "Information has been saved!",
+	const {
+		array_values,
+		string_values,
+	}: { array_values: Array_values; string_values: String_values } = req.body;
+	console.log({
+		array_values,
+		string_values,
 	});
+	// const response = await pool.query(
+	// 	`INSERT INTO tabla_prueba(name, email) VALUES('${name}', '${email}')`
+	// );
+	// res.send({
+	// 	message: "Information has been saved!",
+	// });
 };
 
 const deleteUser = async (req: Request, res: Response) => {

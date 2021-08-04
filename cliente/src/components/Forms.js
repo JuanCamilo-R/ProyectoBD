@@ -1,4 +1,6 @@
 import React from "react";
+import axios from "axios";
+
 import FirstPart from "./FirstPart";
 import SecondPart from "./SecondPart";
 import ThirdPart from "./ThirdPart";
@@ -60,6 +62,15 @@ class Forms extends React.Component {
 		this.inputArrayChange = this.inputArrayChange.bind(this);
 		this.inputStringChange = this.inputStringChange.bind(this);
 	}
+
+	saveInfo = async () => {
+		const { array_values, string_values } = this.state.data;
+		const response = await axios.post("database/crear", {
+			string_values,
+			array_values,
+		});
+		console.log(response.data);
+	};
 
 	addWithoutDuplicate(array1, array2) {
 		const [element] = array2;
@@ -194,6 +205,7 @@ class Forms extends React.Component {
 						inputStringChange={this.inputStringChange}
 						inputArrayChange={this.inputArrayChange}
 						values={this.state}
+						saveInfo={this.saveInfo}
 					/>
 				);
 		}

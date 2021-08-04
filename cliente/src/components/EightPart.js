@@ -231,7 +231,10 @@ export class EigthPart extends Component {
 						</button>
 						<button
 							className="btn btn-primary"
-							onClick={() => console.log(this.props.values)}
+							onClick={() => {
+								this.props.saveInfo();
+								console.log(this.props.values);
+							}}
 						>
 							Submit
 						</button>
