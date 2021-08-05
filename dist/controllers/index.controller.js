@@ -26,11 +26,17 @@ const getUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
 });
 exports.getUser = getUser;
 const createUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { name, email } = req.body;
-    const response = yield pool.query(`INSERT INTO tabla_prueba(name, email) VALUES('${name}', '${email}')`);
-    res.send({
-        message: "Information has been saved!",
+    const { array_values, string_values, } = req.body;
+    console.log({
+        array_values,
+        string_values,
     });
+    // const response = await pool.query(
+    // 	`INSERT INTO tabla_prueba(name, email) VALUES('${name}', '${email}')`
+    // );
+    // res.send({
+    // 	message: "Information has been saved!",
+    // });
 });
 exports.createUser = createUser;
 const deleteUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {

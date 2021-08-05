@@ -79,67 +79,133 @@ export class SixthPart extends Component {
 					>
 						<FormControlLabel
 							value="1"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.genero_musica.includes(
+										"1"
+									)}
+								/>
+							}
 							label="Clásica"
 							name="genero_musica"
 						/>
 						<FormControlLabel
 							value="2"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.genero_musica.includes(
+										"2"
+									)}
+								/>
+							}
 							label="Salsa"
 							name="genero_musica"
 						/>
 						<FormControlLabel
 							value="3"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.genero_musica.includes(
+										"3"
+									)}
+								/>
+							}
 							label="Vallenato"
 							name="genero_musica"
 						/>
 						<FormControlLabel
 							value="4"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.genero_musica.includes(
+										"4"
+									)}
+								/>
+							}
 							label="Bachata"
 							name="genero_musica"
 						/>
 						<FormControlLabel
 							value="5"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.genero_musica.includes(
+										"5"
+									)}
+								/>
+							}
 							label="Popular"
 							name="genero_musica"
 						/>
 						<FormControlLabel
 							value="6"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.genero_musica.includes(
+										"6"
+									)}
+								/>
+							}
 							label="Electrónica"
 							name="genero_musica"
 						/>
 						<FormControlLabel
 							value="7"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.genero_musica.includes(
+										"7"
+									)}
+								/>
+							}
 							label="Merengue"
 							name="genero_musica"
 						/>
 						<FormControlLabel
 							value="8"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.genero_musica.includes(
+										"8"
+									)}
+								/>
+							}
 							label="Rock"
 							name="genero_musica"
 						/>
 						<FormControlLabel
 							value="9"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.genero_musica.includes(
+										"9"
+									)}
+								/>
+							}
 							label="Balada"
 							name="genero_musica"
 						/>
 						<FormControlLabel
 							value="10"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.genero_musica.includes(
+										"10"
+									)}
+								/>
+							}
 							label="Pop"
 							name="genero_musica"
 						/>
 						<FormControlLabel
 							value="11"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.genero_musica.includes(
+										"11"
+									)}
+								/>
+							}
 							label="Trap"
 							name="genero_musica"
 						/>

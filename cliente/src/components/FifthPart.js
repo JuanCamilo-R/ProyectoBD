@@ -127,31 +127,61 @@ export class FifthPart extends Component {
 						onChange={this.props.inputArrayChange}
 					>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.dificultades_cocina.includes(
+										"1"
+									)}
+								/>
+							}
 							value="1"
 							label="Falta de ingredientes"
 							name="dificultades_cocina"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.dificultades_cocina.includes(
+										"2"
+									)}
+								/>
+							}
 							value="2"
 							label="Falta de tiempo"
 							name="dificultades_cocina"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.dificultades_cocina.includes(
+										"3"
+									)}
+								/>
+							}
 							value="3"
 							label="Falta de claridad en las instrucciones"
 							name="dificultades_cocina"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.dificultades_cocina.includes(
+										"4"
+									)}
+								/>
+							}
 							value="4"
 							label="No le gusta cocinar"
 							name="dificultades_cocina"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.dificultades_cocina.includes(
+										"5"
+									)}
+								/>
+							}
 							value="5"
 							label="Otro"
 							name="dificultades_cocina"
@@ -172,25 +202,49 @@ export class FifthPart extends Component {
 						onChange={this.props.inputArrayChange}
 					>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.ocasiones_cocina.includes(
+										"1"
+									)}
+								/>
+							}
 							value="1"
 							label="Cumpleaños"
 							name="ocasiones_cocina"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.ocasiones_cocina.includes(
+										"2"
+									)}
+								/>
+							}
 							value="2"
 							label="Día de amor y amistad"
 							name="ocasiones_cocina"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.ocasiones_cocina.includes(
+										"3"
+									)}
+								/>
+							}
 							value="3"
 							label="Navidad"
 							name="ocasiones_cocina"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.ocasiones_cocina.includes(
+										"4"
+									)}
+								/>
+							}
 							value="4"
 							label="Día del padre o de la madre"
 							name="ocasiones_cocina"

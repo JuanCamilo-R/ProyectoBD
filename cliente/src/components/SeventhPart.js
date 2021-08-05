@@ -187,73 +187,145 @@ export class SixthPart extends Component {
 					>
 						<FormControlLabel
 							value="1"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.categoria_videojuegos.includes(
+										"1"
+									)}
+								/>
+							}
 							label="Juegos de rol"
 							name="categoria_videojuegos"
 						/>
 						<FormControlLabel
 							value="2"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.categoria_videojuegos.includes(
+										"2"
+									)}
+								/>
+							}
 							label="Juegos individuales"
 							name="categoria_videojuegos"
 						/>
 						<FormControlLabel
 							value="3"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.categoria_videojuegos.includes(
+										"3"
+									)}
+								/>
+							}
 							label="Juegos Multijugador"
 							name="categoria_videojuegos"
 						/>
 						<FormControlLabel
 							value="4"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.categoria_videojuegos.includes(
+										"4"
+									)}
+								/>
+							}
 							label="Juegos Deportivos"
 							name="categoria_videojuegos"
 						/>
 						<FormControlLabel
 							value="5"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.categoria_videojuegos.includes(
+										"5"
+									)}
+								/>
+							}
 							label="Realidad Virtual"
 							name="categoria_videojuegos"
 						/>
 						<FormControlLabel
 							value="6"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.categoria_videojuegos.includes(
+										"6"
+									)}
+								/>
+							}
 							label="Juegos de aventura"
 							name="categoria_videojuegos"
 						/>
 						<FormControlLabel
 							value="7"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.categoria_videojuegos.includes(
+										"7"
+									)}
+								/>
+							}
 							label="Juegos de estrategia"
 							name="categoria_videojuegos"
 						/>
 						<FormControlLabel
 							value="8"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.categoria_videojuegos.includes(
+										"8"
+									)}
+								/>
+							}
 							label="Juegos de mesa"
 							name="categoria_videojuegos"
 						/>
 						<FormControlLabel
 							value="9"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.categoria_videojuegos.includes(
+										"9"
+									)}
+								/>
+							}
 							label="Juegos de apuesta"
 							name="categoria_videojuegos"
 						/>
 						<FormControlLabel
 							value="10"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.categoria_videojuegos.includes(
+										"10"
+									)}
+								/>
+							}
 							label="Juegos de memoria"
 							name="categoria_videojuegos"
 						/>
 						<FormControlLabel
 							value="11"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.categoria_videojuegos.includes(
+										"11"
+									)}
+								/>
+							}
 							label="Juegos de celular"
 							name="categoria_videojuegos"
 						/>
 						<FormControlLabel
 							value="12"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.categoria_videojuegos.includes(
+										"12"
+									)}
+								/>
+							}
 							label="Juegos de carta"
 							name="categoria_videojuegos"
 						/>

@@ -60,85 +60,169 @@ export class ForthPart extends Component {
 					>
 						<FormControlLabel
 							value="1"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.genero_favorito_lectura.includes(
+										"1"
+									)}
+								/>
+							}
 							label="Fantasía"
 							name="genero_favorito_lectura"
 						/>
 						<FormControlLabel
 							value="2"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.genero_favorito_lectura.includes(
+										"2"
+									)}
+								/>
+							}
 							label="Ciencia ficción"
 							name="genero_favorito_lectura"
 						/>
 						<FormControlLabel
 							value="3"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.genero_favorito_lectura.includes(
+										"3"
+									)}
+								/>
+							}
 							label="Aventuras"
 							name="genero_favorito_lectura"
 						/>
 						<FormControlLabel
 							value="4"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.genero_favorito_lectura.includes(
+										"4"
+									)}
+								/>
+							}
 							label="Didácticos"
 							name="genero_favorito_lectura"
 						/>
 						<FormControlLabel
 							value="5"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.genero_favorito_lectura.includes(
+										"5"
+									)}
+								/>
+							}
 							label="Paranormal"
 							name="genero_favorito_lectura"
 						/>
 						<FormControlLabel
 							value="6"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.genero_favorito_lectura.includes(
+										"6"
+									)}
+								/>
+							}
 							label="Misterio"
 							name="genero_favorito_lectura"
 						/>
 						<FormControlLabel
 							value="7"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.genero_favorito_lectura.includes(
+										"7"
+									)}
+								/>
+							}
 							label="Distopía"
 							name="genero_favorito_lectura"
 						/>
 						<FormControlLabel
 							value="8"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.genero_favorito_lectura.includes(
+										"8"
+									)}
+								/>
+							}
 							label="Historia"
 							name="genero_favorito_lectura"
 						/>
 						<FormControlLabel
 							value="9"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.genero_favorito_lectura.includes(
+										"9"
+									)}
+								/>
+							}
 							label="Biografía"
 							name="genero_favorito_lectura"
 						/>
 						<FormControlLabel
 							value="10"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.genero_favorito_lectura.includes(
+										"10"
+									)}
+								/>
+							}
 							label="Religión"
 							name="genero_favorito_lectura"
 						/>
 						<FormControlLabel
 							value="11"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.genero_favorito_lectura.includes(
+										"11"
+									)}
+								/>
+							}
 							label="Educación"
 							name="genero_favorito_lectura"
 						/>
 						<FormControlLabel
 							value="12"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.genero_favorito_lectura.includes(
+										"12"
+									)}
+								/>
+							}
 							label="Poesía"
 							name="genero_favorito_lectura"
 						/>
 						<FormControlLabel
 							value="13"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.genero_favorito_lectura.includes(
+										"13"
+									)}
+								/>
+							}
 							label="Desarrollo personal"
 							name="genero_favorito_lectura"
 						/>
 						<FormControlLabel
 							value="14"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.genero_favorito_lectura.includes(
+										"14"
+									)}
+								/>
+							}
 							label="otro"
 							name="genero_favorito_lectura"
 						/>
@@ -198,43 +282,85 @@ export class ForthPart extends Component {
 					>
 						<FormControlLabel
 							value="1"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.idiomas_lectura.includes(
+										"1"
+									)}
+								/>
+							}
 							label="Español"
 							name="idiomas_lectura"
 						/>
 						<FormControlLabel
 							value="2"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.idiomas_lectura.includes(
+										"2"
+									)}
+								/>
+							}
 							label="Portugués"
 							name="idiomas_lectura"
 						/>
 						<FormControlLabel
 							value="3"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.idiomas_lectura.includes(
+										"3"
+									)}
+								/>
+							}
 							label="Alemán"
 							name="idiomas_lectura"
 						/>
 						<FormControlLabel
 							value="4"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.idiomas_lectura.includes(
+										"4"
+									)}
+								/>
+							}
 							label="Inglés"
 							name="idiomas_lectura"
 						/>
 						<FormControlLabel
 							value="5"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.idiomas_lectura.includes(
+										"5"
+									)}
+								/>
+							}
 							label="Frances"
 							name="idiomas_lectura"
 						/>
 						<FormControlLabel
 							value="6"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.idiomas_lectura.includes(
+										"6"
+									)}
+								/>
+							}
 							label="Italiano"
 							name="idiomas_lectura"
 						/>
 						<FormControlLabel
 							value="7"
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.idiomas_lectura.includes(
+										"7"
+									)}
+								/>
+							}
 							label="Otros"
 							name="idiomas_lectura"
 						/>

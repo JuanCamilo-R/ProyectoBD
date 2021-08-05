@@ -4,6 +4,7 @@ import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import { Checkbox, FormGroup } from "@material-ui/core";
+import CheckboxGroup from "react-checkbox-group";
 
 export class SecondPart extends Component {
 	continue = (e) => {
@@ -17,6 +18,13 @@ export class SecondPart extends Component {
 
 	show = () => {
 		console.log(this.props.this.props.values.data.atractivoPelicula);
+	};
+
+	check = (name, value) => {
+		if (this.props.values.data.array_values[name].indexOf(value) === -1) {
+			return false;
+		}
+		return true;
 	};
 
 	render() {
@@ -129,31 +137,61 @@ export class SecondPart extends Component {
 						onChange={this.props.inputArrayChange}
 					>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.atractivoPelicula.includes(
+										"1"
+									)}
+								/>
+							}
 							name="atractivoPelicula"
 							value="1"
 							label="Sinopsis"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.atractivoPelicula.includes(
+										"2"
+									)}
+								/>
+							}
 							name="atractivoPelicula"
 							value="2"
 							label="Efectos visuales"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.atractivoPelicula.includes(
+										"3"
+									)}
+								/>
+							}
 							name="atractivoPelicula"
 							value="3"
 							label="Actores famosos"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.atractivoPelicula.includes(
+										"4"
+									)}
+								/>
+							}
 							value="4"
 							name="atractivoPelicula"
 							label="Otro"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.atractivoPelicula.includes(
+										"5"
+									)}
+								/>
+							}
 							name="atractivoPelicula"
 							value="5"
 							label="Ninguno"
@@ -173,43 +211,85 @@ export class SecondPart extends Component {
 						onChange={this.props.inputArrayChange}
 					>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.comida_favorita_pelicula.includes(
+										"1"
+									)}
+								/>
+							}
 							value="1"
 							label="Crispetas"
 							name="comida_favorita_pelicula"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.comida_favorita_pelicula.includes(
+										"2"
+									)}
+								/>
+							}
 							value="2"
 							label="Nachos"
 							name="comida_favorita_pelicula"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.comida_favorita_pelicula.includes(
+										"3"
+									)}
+								/>
+							}
 							value="3"
 							label="Perro caliente"
 							name="comida_favorita_pelicula"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.comida_favorita_pelicula.includes(
+										"4"
+									)}
+								/>
+							}
 							value="4"
 							label="Hamburguesa"
 							name="comida_favorita_pelicula"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.comida_favorita_pelicula.includes(
+										"5"
+									)}
+								/>
+							}
 							value="5"
 							label="Papas fritas"
 							name="comida_favorita_pelicula"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.comida_favorita_pelicula.includes(
+										"6"
+									)}
+								/>
+							}
 							value="6"
 							name="comida_favorita_pelicula"
 							label="Otro"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.comida_favorita_pelicula.includes(
+										"7"
+									)}
+								/>
+							}
 							value="7"
 							label="Ninguno"
 							name="comida_favorita_pelicula"

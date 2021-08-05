@@ -85,79 +85,157 @@ export class ThirdPart extends Component {
 						onChange={this.props.inputArrayChange}
 					>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.deporte_favorito.includes(
+										"1"
+									)}
+								/>
+							}
 							value="1"
 							label="Fútbol"
 							name="deporte_favorito"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.deporte_favorito.includes(
+										"2"
+									)}
+								/>
+							}
 							value="2"
 							label="Baloncesto"
 							name="deporte_favorito"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.deporte_favorito.includes(
+										"3"
+									)}
+								/>
+							}
 							value="3"
 							label="Crossfit"
 							name="deporte_favorito"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.deporte_favorito.includes(
+										"4"
+									)}
+								/>
+							}
 							value="4"
 							label="Voleibol"
 							name="deporte_favorito"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.deporte_favorito.includes(
+										"5"
+									)}
+								/>
+							}
 							value="5"
 							label="Patinaje"
 							name="deporte_favorito"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.deporte_favorito.includes(
+										"6"
+									)}
+								/>
+							}
 							value="6"
 							label="Natación"
 							name="deporte_favorito"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.deporte_favorito.includes(
+										"7"
+									)}
+								/>
+							}
 							value="7"
 							label="Ciclismo"
 							name="deporte_favorito"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.deporte_favorito.includes(
+										"8"
+									)}
+								/>
+							}
 							value="8"
 							label="Ping Pong"
 							name="deporte_favorito"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.deporte_favorito.includes(
+										"9"
+									)}
+								/>
+							}
 							value="9"
 							label="Tenis"
 							name="deporte_favorito"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.deporte_favorito.includes(
+										"10"
+									)}
+								/>
+							}
 							value="10"
 							label="Rugby"
 							name="deporte_favorito"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.deporte_favorito.includes(
+										"11"
+									)}
+								/>
+							}
 							value="11"
 							label="Otro"
 							name="deporte_favorito"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.deporte_favorito.includes(
+										"12"
+									)}
+								/>
+							}
 							value="12"
 							label="Ninguno"
 							name="deporte_favorito"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.deporte_favorito.includes(
+										"13"
+									)}
+								/>
+							}
 							value="13"
 							label="Ajedrez"
 							name="deporte_favorito"
@@ -177,31 +255,61 @@ export class ThirdPart extends Component {
 						onChange={this.props.inputArrayChange}
 					>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.razon_deporte.includes(
+										"1"
+									)}
+								/>
+							}
 							value="1"
 							label="Lo disfruto"
 							name="razon_deporte"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.razon_deporte.includes(
+										"2"
+									)}
+								/>
+							}
 							value="2"
 							label="Por salud"
 							name="razon_deporte"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.razon_deporte.includes(
+										"3"
+									)}
+								/>
+							}
 							value="3"
 							label="Para verme bien"
 							name="razon_deporte"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.razon_deporte.includes(
+										"4"
+									)}
+								/>
+							}
 							value="4"
 							label="Otra"
-							name="razon_no_deporte"
+							name="razon_deporte"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.razon_deporte.includes(
+										"5"
+									)}
+								/>
+							}
 							value="5"
 							label="No aplica"
 							name="razon_deporte"
@@ -221,37 +329,73 @@ export class ThirdPart extends Component {
 						onChange={this.props.inputArrayChange}
 					>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.razon_no_deporte.includes(
+										"1"
+									)}
+								/>
+							}
 							value="1"
 							label="Falta de tiempo"
 							name="razon_no_deporte"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.razon_no_deporte.includes(
+										"2"
+									)}
+								/>
+							}
 							value="2"
 							label="Falta de iniciativa"
 							name="razon_no_deporte"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.razon_no_deporte.includes(
+										"3"
+									)}
+								/>
+							}
 							value="3"
 							label="Falta de compañía"
 							name="razon_no_deporte"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.razon_no_deporte.includes(
+										"4"
+									)}
+								/>
+							}
 							value="4"
 							label="No le gusta"
 							name="razon_no_deporte"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.razon_no_deporte.includes(
+										"5"
+									)}
+								/>
+							}
 							value="5"
 							label="Otra"
 							name="razon_no_deporte"
 						/>
 						<FormControlLabel
-							control={<Checkbox />}
+							control={
+								<Checkbox
+									checked={this.props.values.data.array_values.razon_no_deporte.includes(
+										"6"
+									)}
+								/>
+							}
 							value="6"
 							label="No aplica"
 							name="razon_no_deporte"

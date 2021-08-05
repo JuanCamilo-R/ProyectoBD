@@ -26,6 +26,7 @@ export class FirstPart extends Component {
 						name="cedula"
 						onChange={this.props.inputStringChange}
 						value={this.props.values.data.string_values.cedula}
+						required
 					/>
 				</div>
 				<br />
@@ -37,6 +38,7 @@ export class FirstPart extends Component {
 						name="nombre"
 						onChange={this.props.inputStringChange}
 						value={this.props.values.data.string_values.nombre}
+						required={true}
 					/>
 				</div>
 				<br />
@@ -48,6 +50,7 @@ export class FirstPart extends Component {
 						name="apellido"
 						onChange={this.props.inputStringChange}
 						value={this.props.values.data.string_values.apellido}
+						required={true}
 					/>
 				</div>
 				<br />
@@ -59,6 +62,7 @@ export class FirstPart extends Component {
 						name="edad"
 						onChange={this.props.inputStringChange}
 						value={this.props.values.data.string_values.edad}
+						required={true}
 					/>
 				</div>
 				<br />
@@ -70,6 +74,7 @@ export class FirstPart extends Component {
 							name="ocupacion"
 							value={this.props.values.data.string_values.ocupacion}
 							onChange={this.props.inputStringChange}
+							required={true}
 						>
 							<FormControlLabel
 								value="1"
