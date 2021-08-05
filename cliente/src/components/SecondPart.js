@@ -4,7 +4,6 @@ import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import { Checkbox, FormGroup } from "@material-ui/core";
-import CheckboxGroup from "react-checkbox-group";
 
 export class SecondPart extends Component {
 	continue = (e) => {

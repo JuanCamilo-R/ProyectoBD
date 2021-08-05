@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./styles/Badge.css";
+
+import Swal from "sweetalert2";
 import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
@@ -10,6 +12,70 @@ export class EigthPart extends Component {
 		this.props.prevStep();
 	};
 
+	checkArrayValues = (keys, values) => {
+		let flag = {
+			sentArray: true,
+			errorsArray: "",
+		};
+		values.forEach((element, index) => {
+			if (element.length === 0) {
+				flag = {
+					sent: false,
+					errorsArray: flag.errorsArray.concat(" ", keys[index]),
+				};
+			}
+		});
+		return flag;
+	};
+
+	checkStringValues = (keys, values) => {
+		let flag = {
+			sentString: true,
+			errorsString: "",
+		};
+		values.forEach((element, index) => {
+			if (element === "") {
+				flag = {
+					sent: false,
+					errorsString: flag.errorsString.concat(" ", keys[index]),
+				};
+			}
+		});
+		return flag;
+	};
+
+	submitInfo = () => {
+		const arrayKeys = Object.keys(this.props.values.data.array_values);
+		const arrayValues = Object.values(this.props.values.data.array_values);
+		const { sentArray, errorsArray } = this.checkArrayValues(
+			arrayKeys,
+			arrayValues
+		);
+		const stringKeys = Object.keys(this.props.values.data.string_values);
+		const stringValues = Object.values(this.props.values.data.string_values);
+		const { sentString, errorsString } = this.checkStringValues(
+			stringKeys,
+			stringValues
+		);
+		if (sentString && sentArray) {
+			this.props.saveInfo();
+			Swal.fire({
+				position: "top",
+				icon: "success",
+				title: "Su información ha sido enviada",
+				text: "Gracias por participar!",
+			});
+			console.log(this.props.values);
+		} else {
+			Swal.fire({
+				position: "top",
+				icon: "error",
+				title: "Ups!, parece que hubo un error ",
+				text: `Parece que no llenaste las siguientes preguntas: ${errorsString} ${errorsArray}, 
+			por favor retrocede y respóndelas :)`,
+			});
+		}
+	};
 	render() {
 		return (
 			<div className="form-container">
@@ -229,13 +295,7 @@ export class EigthPart extends Component {
 						<button className="btn btn-primary" onClick={this.back}>
 							Atrás.
 						</button>
-						<button
-							className="btn btn-primary"
-							onClick={() => {
-								this.props.saveInfo();
-								console.log(this.props.values);
-							}}
-						>
+						<button className="btn btn-primary" onClick={this.submitInfo}>
 							Submit
 						</button>
 					</div>
