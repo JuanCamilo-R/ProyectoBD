@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Formdb } from "./Formdb";
+import App from "./components/App";
+// import { Formdb } from "./Formdb";
 
-ReactDOM.render(<Formdb />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));

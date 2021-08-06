@@ -16,7 +16,6 @@ export class ThirdPart extends Component {
 	};
 
 	render() {
-		const { values, inputChange, inputChangeArray } = this.props;
 		return (
 			<div className="form-container">
 				<div>

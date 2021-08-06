@@ -3,7 +3,7 @@ import "./ComponentStyles/Badge.css";
 import Forms from "./Forms";
 import TheNavbar from "./Navbar";
 import MyFooter from "./Footer";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 class PaginaForm extends React.Component {
 	render() {
 		return (

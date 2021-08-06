@@ -1,5 +1,4 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
 //Img
 import logo_universidad from "../images/logo_universidad.png";
 
@@ -32,7 +31,7 @@ function MyFooter() {
 				</article>
 			</div>
 
-			<article class="myfooter__uni-info">
+			<article className="myfooter__uni-info">
 				<img id="logo_u" src={logo_universidad} alt="" />
 				<section>
 					<b>Universidad del valle</b>

@@ -208,6 +208,8 @@ class Forms extends React.Component {
 						saveInfo={this.saveInfo}
 					/>
 				);
+			default:
+				return "null";
 		}
 	}
 }
