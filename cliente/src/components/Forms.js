@@ -113,18 +113,39 @@ class Forms extends React.Component {
 	}
 
 	inputStringChange(e) {
-		this.setState({
-			data: {
-				...this.state.data,
-				string_values: {
-					...this.state.data.string_values,
-					[e.target.name]: e.target.value,
+		if(this.checkStringChange(e)){
+			this.setState({
+				data: {
+					...this.state.data,
+					string_values: {
+						...this.state.data.string_values,
+						[e.target.name]: e.target.value,
+					},
 				},
-			},
-		});
-		console.log(this.state.data.string_values);
+			});
+			console.log(this.state.data.string_values);
+		}		
 	}
-
+	//Revisa que lo ingresado en los campos cumpla con las restricciones
+	checkStringChange(e){
+		let value = e.target.value;
+		switch(e.target.name){
+			case "cedula":
+				return !/\D+/.test(value);
+			case "nombre":
+				return !/[0-9]+/.test(value);
+			case "apellido":
+				return !/[0-9]+/.test(value);
+			case "edad":
+					return value>=0&&value<=100?true:false;
+			case "color":
+				return !/[0-9]+/.test(value);
+			case "comuna":
+				return value<=22&&value>=0?true:false;	
+			default:
+				return true;
+		}
+	}
 	render() {
 		switch (this.state.step) {
 			case 1:
