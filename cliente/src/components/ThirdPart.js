@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./styles/Badge.css";
+import "./ComponentStyles/Badge.css";
 import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
