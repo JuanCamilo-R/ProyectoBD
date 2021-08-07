@@ -9,7 +9,7 @@ class TheNavbar extends React.Component {
 	render() {
 		return (
 			<Navbar bg="dark" variant="dark">
-				<Link to="/">
+				<Link to="/" className="text-reset text-decoration-none">
 					<Navbar.Brand>
 						<img
 							alt=""
