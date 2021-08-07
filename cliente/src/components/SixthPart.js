@@ -71,7 +71,7 @@ export class SixthPart extends Component {
 				<div className="form-group form-design">
 					<label htmlFor="genero_musica">Generos de musica favoritos</label>
 					<FormGroup
-						row
+						row={true}
 						arial-label="genero_musica"
 						name="genero_musica"
 						value={this.props.values.data.array_values.genero_musica}

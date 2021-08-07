@@ -47,7 +47,7 @@ class Badge extends React.Component {
 								hacer un estudio de mercado en la ciudad de Cali,con el
 								propósito de entender las tendencias y gustos de la población
 								caleña. <br /> Al finalizar el estudio se debe tomar la decisión
-								de cuál evento se ha de realiza.
+								de cuál evento se ha de realizar.
 							</p>
 						</blockquote>
 					) : null}

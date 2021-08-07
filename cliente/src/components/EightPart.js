@@ -294,7 +294,9 @@ export class EigthPart extends Component {
 						<button className="btn btn-primary" onClick={this.back}>
 							Atrás.
 						</button>
-						<button className="btn btn-primary" onClick={this.submitInfo}>
+					</div>
+					<div className="col-6 text-right">
+						<button className="btn btn-warning" onClick={this.submitInfo}>
 							Submit
 						</button>
 					</div>
