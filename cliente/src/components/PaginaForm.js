@@ -13,7 +13,7 @@ class PaginaForm extends React.Component {
 					<Container>
 						<div>
 							<div className="container-style">
-								<Forms />
+								<Forms history={this.props.history} />
 							</div>
 						</div>
 					</Container>

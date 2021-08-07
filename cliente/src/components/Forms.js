@@ -70,6 +70,8 @@ class Forms extends React.Component {
 			array_values,
 		});
 		console.log(response.data);
+		console.log(this.props.history);
+		this.props.history.push("/");
 	};
 
 	addWithoutDuplicate(array1, array2) {
@@ -113,7 +115,7 @@ class Forms extends React.Component {
 	}
 
 	inputStringChange(e) {
-		if(this.checkStringChange(e)){
+		if (this.checkStringChange(e)) {
 			this.setState({
 				data: {
 					...this.state.data,
@@ -124,12 +126,12 @@ class Forms extends React.Component {
 				},
 			});
 			console.log(this.state.data.string_values);
-		}		
+		}
 	}
 	//Revisa que lo ingresado en los campos cumpla con las restricciones
-	checkStringChange(e){
+	checkStringChange(e) {
 		let value = e.target.value;
-		switch(e.target.name){
+		switch (e.target.name) {
 			case "cedula":
 				return !/\D+/.test(value);
 			case "nombre":
@@ -137,11 +139,11 @@ class Forms extends React.Component {
 			case "apellido":
 				return !/[0-9]+/.test(value);
 			case "edad":
-					return value>=0&&value<=100?true:false;
+				return value >= 0 && value <= 100 ? true : false;
 			case "color":
 				return !/[0-9]+/.test(value);
 			case "comuna":
-				return value<=22&&value>=0?true:false;	
+				return value <= 22 && value >= 0 ? true : false;
 			default:
 				return true;
 		}
