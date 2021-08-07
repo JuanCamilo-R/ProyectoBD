@@ -4,10 +4,6 @@ import "./ComponentStyles/Home.css";
 import "./ComponentStyles/Footer.css";
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
-import TheNavbar from "../components/Navbar";
-
-import MyFooter from "./Footer";
-
 //Images
 import logo_bichoclo from "../images/LOGO-BICHOCLO.png";
 
@@ -17,8 +13,7 @@ class Badge extends React.Component {
 	};
 	render() {
 		return (
-			<div>
-				<TheNavbar />
+			<React.Fragment>
 				<div className="main">
 					<div className="main__container--logo">
 						<img
@@ -57,8 +52,7 @@ class Badge extends React.Component {
 						</blockquote>
 					) : null}
 				</div>
-				<MyFooter />
-			</div>
+			</React.Fragment>
 		);
 	}
 }
