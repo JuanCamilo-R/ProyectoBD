@@ -296,7 +296,7 @@ export class EigthPart extends Component {
 						</button>
 					</div>
 					<div className="col-6 text-right">
-						<button className="btn btn-warning" onClick={this.submitInfo}>
+						<button className="btn btn-warning" onClick={this.props.saveInfo}>
 							Submit
 						</button>
 					</div>

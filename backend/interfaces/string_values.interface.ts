@@ -1,27 +1,30 @@
-export interface String_values {
+interface IObjectKeys {
+	[key: number]: number;
+}
+export interface String_values extends IObjectKeys {
 	cedula: string;
 	nombre: string;
-	apellido: string;
-	edad: string;
-	ocupacion: string;
-	genero: string;
-	hijos_si_no: string;
-	color: string;
-	comuna: string;
-	frecuencia_pelicula: string;
-	frecuencia_deporte: string;
-	frecuencia_lectura: string;
-	adquiere_frecuencia_lectura: string;
-	frecuencia_cocina: string;
-	comida_favorita_cocina: string;
-	frecuencia_musica: string;
-	nivel_gusto_concierto: string;
-	frecuencia_videojuegos: string;
-	juego_videojuegos: string;
-	consola_videojuegos: string;
-	mes_datos_eventos: string;
-	medio_datos_eventos: string;
-	mascota_si_no: string;
-	barrio: string;
-	genero_favorito_pelicula: string;
+	apellido: number;
+	edad: number;
+	ocupacion: number;
+	genero: number;
+	hijos_si_no: number;
+	color: number;
+	comuna: number;
+	frecuencia_pelicula: number;
+	frecuencia_deporte: number;
+	frecuencia_lectura: number;
+	adquiere_frecuencia_lectura: number;
+	frecuencia_cocina: number;
+	comida_favorita_cocina: number;
+	frecuencia_musica: number;
+	nivel_gusto_concierto: number;
+	frecuencia_videojuegos: number;
+	juego_videojuegos: number;
+	consola_videojuegos: number;
+	mes_datos_eventos: number;
+	medio_datos_eventos: number;
+	mascota_si_no: number;
+	barrio: number;
+	genero_favorito_pelicula: number;
 }
