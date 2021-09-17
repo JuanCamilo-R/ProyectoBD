@@ -14,22 +14,20 @@ const pool = new Pool({
 
 const array = ["Federico", "Alejandra", "Papa Robinson"];
 
-let result = array.reduce(
-	(acum: String, currentVal: String) => (acum += currentVal + ","),
-	""
-);
+const convertArrayIntoPgArray = (array: Array<any>) => {
+	let result: String = array.reduce(
+		(acum: String, currentVal: String) => (acum += currentVal + ","),
+		""
+	);
 
-result = result.slice(0, result.length - 1);
+	return result.slice(0, result.length - 1);
+};
 
 const getUser = async (req: Request, res: Response) => {
 	const {
 		array_values,
 		string_values,
 	}: { array_values: Array_values; string_values: String_values } = req.body;
-	// const response = await pool.query(
-	// 	`SELECT func_personas('85015', 'Messirve', 'SIUU', 'No', 1, 7, 3, 18)`
-	// );
-
 	/*
 		SELECT categoria_peliculas(cedula, id_frecuencia, id_atractivo_pelicua);
 	*/
@@ -45,9 +43,61 @@ const createUser = async (req: Request, res: Response) => {
 		array_values,
 		string_values,
 	}: { array_values: Array_values; string_values: String_values } = req.body;
-	// const response = await pool.query(
-	// 	`INSERT INTO tabla_prueba(name, email) VALUES('${name}', '${email}')`
-	// );
+
+	const {
+		cedula,
+		nombre,
+		apellido,
+		hijos_si_no,
+		genero,
+		color,
+		comuna,
+		edad,
+		ocupacion,
+		//pelicula
+		frecuencia_pelicula,
+		genero_favorito_pelicula,
+		//lectura
+		adquiere_frecuencia_lectura,
+		frecuencia_lectura,
+	} = string_values;
+
+	const {
+		//pelicula
+		comida_favorita_pelicula,
+		atractivoPelicula,
+		//lectura
+		idiomas_lectura,
+		genero_favorito_lectura,
+	} = array_values;
+	try {
+		const respuestaPersonas = await pool.query(
+			`SELECT func_personas('${cedula}', '${nombre}', '${apellido}', '${hijos_si_no}',${genero}, 7, ${comuna}, ${edad}, ${ocupacion})`
+		);
+		const respuestaPelicula = await pool.query(
+			`SELECT func_categoria_pelicula('${cedula}',${frecuencia_pelicula}, ${genero_favorito_pelicula}, 
+		'{${convertArrayIntoPgArray(atractivoPelicula)}}', '{${convertArrayIntoPgArray(
+				comida_favorita_pelicula
+			)}}')`
+		);
+
+		const respuestaDeporte = null;
+
+		const respuestaLectura = await pool.query(
+			`SELECT func_categoria_lectura('${cedula}', '${frecuencia_lectura}', '${adquiere_frecuencia_lectura}',
+		'{${convertArrayIntoPgArray(idiomas_lectura)}}', '{${convertArrayIntoPgArray(
+				genero_favorito_lectura
+			)}}')`
+		);
+	} catch (e) {
+		res.status(400).send({
+			error:
+				"Query error, this may be because the information you have provided is not allowed",
+		});
+	} finally {
+		//nothing
+	}
+
 	console.log({
 		array_values,
 		string_values,
