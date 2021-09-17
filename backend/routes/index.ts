@@ -6,7 +6,6 @@ import {
 	updateUser,
 } from "../controllers/index.controller";
 const router = Router();
-// const path = require("path");
 
 router.get("/consultar", getUser);
 router.post("/crear", createUser);

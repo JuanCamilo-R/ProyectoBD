@@ -28,14 +28,6 @@ const getUser = async (req: Request, res: Response) => {
 		array_values,
 		string_values,
 	}: { array_values: Array_values; string_values: String_values } = req.body;
-	/*
-		SELECT categoria_peliculas(cedula, id_frecuencia, id_atractivo_pelicua);
-	*/
-	// const response = await pool.query("SELECT * FROM tabla_prueba");
-	console.log(`${path.join(__dirname, "../../")}`);
-	// res.send({
-	// 	Filas: response.rows,
-	// });
 };
 
 const createUser = async (req: Request, res: Response) => {
