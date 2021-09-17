@@ -17,8 +17,16 @@ const pool = new pg_1.Pool({
         rejectUnauthorized: false,
     },
 });
+const array = ["Federico", "Alejandra", "Papa Robinson"];
+let result = array.reduce((acum, currentVal) => (acum += currentVal + ","), "");
+result = result.slice(0, result.length - 1);
 const getUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const response = yield pool.query("SELECT * FROM tabla_prueba");
+    const { array_values, string_values, } = req.body;
+    const response = yield pool.query(`SELECT func_personas('85015', 'Messirve', 'SIUU', 'No', 1, 7, 3, 18)`);
+    /*
+        SELECT categoria_peliculas(cedula, id_frecuencia, id_atractivo_pelicua);
+    */
+    // const response = await pool.query("SELECT * FROM tabla_prueba");
     console.log(response.rows);
     res.send({
         Filas: response.rows,
@@ -27,16 +35,13 @@ const getUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
 exports.getUser = getUser;
 const createUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { array_values, string_values, } = req.body;
-    console.log({
-        array_values,
-        string_values,
-    });
     // const response = await pool.query(
     // 	`INSERT INTO tabla_prueba(name, email) VALUES('${name}', '${email}')`
     // );
-    // res.send({
-    // 	message: "Information has been saved!",
-    // });
+    console.log(__dirname);
+    res.send({
+        message: "Information has been saved!",
+    });
 });
 exports.createUser = createUser;
 const deleteUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {

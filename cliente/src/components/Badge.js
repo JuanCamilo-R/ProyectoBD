@@ -23,7 +23,7 @@ class Badge extends React.Component {
 						></img>
 					</div>
 					<div className="text-center">
-						<Link to="/Form">
+						<Link to="/form">
 							<Button className="main__form-button" variant="outline-warning">
 								Llena el form, rey
 							</Button>

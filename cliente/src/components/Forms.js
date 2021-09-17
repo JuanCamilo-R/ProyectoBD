@@ -71,7 +71,7 @@ class Forms extends React.Component {
 		});
 		console.log(response.data);
 		console.log(this.props.history);
-		this.props.history.push("/");
+		// this.props.history.push("/");
 	};
 
 	addWithoutDuplicate(array1, array2) {
