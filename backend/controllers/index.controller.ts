@@ -52,6 +52,12 @@ const createUser = async (req: Request, res: Response) => {
 		//lectura
 		adquiere_frecuencia_lectura,
 		frecuencia_lectura,
+		//deporte
+		frecuencia_deporte,
+		//cocina
+		frecuencia_cocina,
+		comida_favorita_cocina
+
 	} = string_values;
 
 	const {
@@ -61,6 +67,13 @@ const createUser = async (req: Request, res: Response) => {
 		//lectura
 		idiomas_lectura,
 		genero_favorito_lectura,
+		//deporte
+		deporte_favorito,
+		razon_deporte,
+		razon_no_deporte,
+		//cocina
+		dificultades_cocina,
+		ocasiones_cocina
 	} = array_values;
 	try {
 		const respuestaPersonas = await pool.query(
@@ -73,7 +86,10 @@ const createUser = async (req: Request, res: Response) => {
 			)}}')`
 		);
 
-		const respuestaDeporte = null;
+		const respuestaDeporte = await pool.query(
+			`SELECT func_categoria_deporte('${cedula}', '${frecuencia_deporte}', '${convertArrayIntoPgArray(deporte_favorito)}',
+			'${convertArrayIntoPgArray(razon_deporte)}','${convertArrayIntoPgArray(razon_no_deporte)}')`
+		);
 
 		const respuestaLectura = await pool.query(
 			`SELECT func_categoria_lectura('${cedula}', '${frecuencia_lectura}', '${adquiere_frecuencia_lectura}',
@@ -81,6 +97,12 @@ const createUser = async (req: Request, res: Response) => {
 				genero_favorito_lectura
 			)}}')`
 		);
+
+		const respuestaCocina = await pool.query(
+			`SELECT func_categoria_cocina('${cedula}', '${frecuencia_cocina}', '${comida_favorita_cocina}',
+			'${convertArrayIntoPgArray(dificultades_cocina)}','${convertArrayIntoPgArray(ocasiones_cocina)}')`
+		);
+
 	} catch (e) {
 		res.status(400).send({
 			error:
