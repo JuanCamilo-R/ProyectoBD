@@ -136,13 +136,29 @@ export class FirstPart extends Component {
 
 				<div className="form-group">
 					<label htmlFor="Color">Color favorito:</label>
-					<input
-						type="text"
-						className="form-control"
-						name="color"
-						onChange={this.props.inputStringChange}
-						value={this.props.values.data.string_values.color}
-					/>
+					<div className="color form-design">
+						<RadioGroup
+							aria-label="color"
+							name="color"
+							className="answers"
+							value={this.props.values.data.string_values.color}
+							onChange={this.props.inputStringChange}
+						>
+							<FormControlLabel value="1" control={<Radio />} label="Rojo" />
+							<FormControlLabel value="2" control={<Radio />} label="Azul" />
+							<FormControlLabel
+								value="3"
+								control={<Radio />}
+								label="Amarillo"
+							/>
+							<FormControlLabel value="4" control={<Radio />} label="Verde" />
+							<FormControlLabel value="5" control={<Radio />} label="Morado" />
+							<FormControlLabel value="6" control={<Radio />} label="Marrón" />
+							<FormControlLabel value="7" control={<Radio />} label="Rosa" />
+							<FormControlLabel value="8" control={<Radio />} label="Naranja" />
+							<FormControlLabel value="9" control={<Radio />} label="Otro" />
+						</RadioGroup>
+					</div>
 				</div>
 				<br />
 

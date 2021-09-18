@@ -50,6 +50,13 @@
 .h1 {
 	text-align: center;
 }
+
+.answers {
+	display: flex;
+	flex-direction: row !important;
+	flex-wrap: wrap;
+}
+
 /*700*/
 .badge2 {
 	position: center;
