@@ -100,9 +100,8 @@ class EigthPart extends Component {
 						return this.props.history.push("/");
 					});
 			} catch (e) {
-				console.log("catch aquiii");
+				console.log("Error catch");
 			}
-			console.log(this.props.values);
 		} else {
 			Swal.fire({
 				position: "top",
