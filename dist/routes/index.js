@@ -5,7 +5,6 @@ const express_1 = require("express");
 const index_controller_1 = require("../controllers/index.controller");
 const router = express_1.Router();
 exports.router = router;
-// const path = require("path");
 router.get("/consultar", index_controller_1.getUser);
 router.post("/crear", index_controller_1.createUser);
 router.delete("/borrar/:id", index_controller_1.deleteUser);

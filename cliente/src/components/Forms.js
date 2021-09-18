@@ -65,13 +65,11 @@ class Forms extends React.Component {
 
 	saveInfo = async () => {
 		const { array_values, string_values } = this.state.data;
-		const response = await axios.post("database/crear", {
+		const res = await axios.post("database/crear", {
 			string_values,
 			array_values,
 		});
-		console.log(response.data);
-		console.log(this.props.history);
-		// this.props.history.push("/");
+		return res;
 	};
 
 	addWithoutDuplicate(array1, array2) {
@@ -88,17 +86,26 @@ class Forms extends React.Component {
 	nextStep = () => {
 		const { step } = this.state;
 		this.setState({ step: step + 1 });
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+			/* you can also use 'auto' behaviour
+				 in place of 'smooth' */
+		});
 	};
 
 	prevStep = () => {
 		const { step } = this.state;
 		this.setState({ step: step - 1 });
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+			/* you can also use 'auto' behaviour
+				 in place of 'smooth' */
+		});
 	};
 
 	inputArrayChange(e) {
-		//console.log(e.target.name);
-		//console.log(this.state.data.array_values[`${e.target.name}`]);
-		//console.log([e.target.value]);
 		this.setState({
 			data: {
 				...this.state.data,
@@ -111,7 +118,6 @@ class Forms extends React.Component {
 				},
 			},
 		});
-		console.log(this.state.data.array_values);
 	}
 
 	inputStringChange(e) {
@@ -125,7 +131,6 @@ class Forms extends React.Component {
 					},
 				},
 			});
-			console.log(this.state.data.string_values);
 		}
 	}
 	//Revisa que lo ingresado en los campos cumpla con las restricciones
@@ -137,10 +142,6 @@ class Forms extends React.Component {
 			case "nombre":
 				return !/[0-9]+/.test(value);
 			case "apellido":
-				return !/[0-9]+/.test(value);
-			case "edad":
-				return value >= 0 && value <= 100 ? true : false;
-			case "color":
 				return !/[0-9]+/.test(value);
 			case "comuna":
 				return value <= 22 && value >= 0 ? true : false;

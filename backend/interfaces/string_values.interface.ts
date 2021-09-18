@@ -4,7 +4,7 @@ interface IObjectKeys {
 export interface String_values extends IObjectKeys {
 	cedula: string;
 	nombre: string;
-	apellido: number;
+	apellido: string;
 	edad: number;
 	ocupacion: number;
 	genero: number;

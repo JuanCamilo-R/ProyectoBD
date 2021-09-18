@@ -30,7 +30,7 @@ const getUser = async (req: Request, res: Response) => {
 	}: { array_values: Array_values; string_values: String_values } = req.body;
 };
 
-const createUser = async (req: Request, res: Response) => {
+const createUser = async (req: Request, res: Response, next: Function) => {
 	const {
 		array_values,
 		string_values,
@@ -56,8 +56,19 @@ const createUser = async (req: Request, res: Response) => {
 		frecuencia_deporte,
 		//cocina
 		frecuencia_cocina,
-		comida_favorita_cocina
-
+		comida_favorita_cocina,
+		//musica
+		frecuencia_musica,
+		nivel_gusto_concierto,
+		//videojuego
+		frecuencia_videojuegos,
+		consola_videojuegos,
+		juego_videojuegos,
+		//evento
+		barrio,
+		mes_datos_eventos,
+		medio_datos_eventos,
+		mascota_si_no,
 	} = string_values;
 
 	const {
@@ -73,40 +84,67 @@ const createUser = async (req: Request, res: Response) => {
 		razon_no_deporte,
 		//cocina
 		dificultades_cocina,
-		ocasiones_cocina
+		ocasiones_cocina,
+		//musica
+		genero_musica,
+		//videojuego
+		categoria_videojuegos,
 	} = array_values;
 	try {
 		const respuestaPersonas = await pool.query(
-			`SELECT func_personas('${cedula}', '${nombre}', '${apellido}', '${hijos_si_no}',${genero}, 7, ${comuna}, ${edad}, ${ocupacion})`
+			`SELECT func_personas('${cedula}', '${nombre}', '${apellido}', '${hijos_si_no}',${genero},${color}, ${comuna},${edad},${ocupacion})`
 		);
+
 		const respuestaPelicula = await pool.query(
-			`SELECT func_categoria_pelicula('${cedula}',${frecuencia_pelicula}, ${genero_favorito_pelicula}, 
+			`SELECT func_categoria_pelicula('${cedula}',${frecuencia_pelicula}, ${genero_favorito_pelicula},
 		'{${convertArrayIntoPgArray(atractivoPelicula)}}', '{${convertArrayIntoPgArray(
 				comida_favorita_pelicula
 			)}}')`
 		);
 
 		const respuestaDeporte = await pool.query(
-			`SELECT func_categoria_deporte('${cedula}', '${frecuencia_deporte}', '${convertArrayIntoPgArray(deporte_favorito)}',
-			'${convertArrayIntoPgArray(razon_deporte)}','${convertArrayIntoPgArray(razon_no_deporte)}')`
+			`SELECT func_categoria_deporte('${cedula}', ${frecuencia_deporte}, '{${convertArrayIntoPgArray(
+				deporte_favorito
+			)}}',
+			'{${convertArrayIntoPgArray(razon_deporte)}}','{${convertArrayIntoPgArray(
+				razon_no_deporte
+			)}}')`
 		);
 
 		const respuestaLectura = await pool.query(
-			`SELECT func_categoria_lectura('${cedula}', '${frecuencia_lectura}', '${adquiere_frecuencia_lectura}',
+			`SELECT func_categoria_lectura('${cedula}', ${frecuencia_lectura}, ${adquiere_frecuencia_lectura},
 		'{${convertArrayIntoPgArray(idiomas_lectura)}}', '{${convertArrayIntoPgArray(
 				genero_favorito_lectura
 			)}}')`
 		);
 
 		const respuestaCocina = await pool.query(
-			`SELECT func_categoria_cocina('${cedula}', '${frecuencia_cocina}', '${comida_favorita_cocina}',
-			'${convertArrayIntoPgArray(dificultades_cocina)}','${convertArrayIntoPgArray(ocasiones_cocina)}')`
+			`SELECT func_categoria_cocina('${cedula}', ${frecuencia_cocina}, ${comida_favorita_cocina},
+			'{${convertArrayIntoPgArray(dificultades_cocina)}}','{${convertArrayIntoPgArray(
+				ocasiones_cocina
+			)}}')`
 		);
 
+		const respuestaMusica = await pool.query(
+			`SELECT func_categoria_musica('${cedula}', ${frecuencia_musica}, ${nivel_gusto_concierto},
+											'{${convertArrayIntoPgArray(genero_musica)}}')`
+		);
+
+		const respuestaVideojuego = await pool.query(
+			`SELECT func_categoria_videojuego('${cedula}', ${frecuencia_videojuegos},
+			${consola_videojuegos},  ${juego_videojuegos}, '{${convertArrayIntoPgArray(
+				categoria_videojuegos
+			)}}'
+			)`
+		);
+
+		const respuestaEvento = await pool.query(
+			`SELECT func_categoria_evento('${cedula}', ${barrio}, ${mes_datos_eventos}, ${medio_datos_eventos},
+			'${mascota_si_no}')`
+		);
 	} catch (e) {
 		res.status(400).send({
-			error:
-				"Query error, this may be because the information you have provided is not allowed",
+			message: "Error!",
 		});
 	} finally {
 		//nothing

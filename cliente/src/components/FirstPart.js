@@ -9,11 +9,6 @@ export class FirstPart extends Component {
 		e.preventDefault();
 		this.props.nextStep();
 	};
-
-	show = (value) => {
-		console.log(value.genero);
-	};
-
 	render() {
 		return (
 			<div className="form-container">
@@ -57,11 +52,13 @@ export class FirstPart extends Component {
 				<div className="form-group">
 					<label htmlFor="edad">Edad:</label>
 					<input
-						type="text"
+						type="number"
 						className="form-control"
 						name="edad"
 						onChange={this.props.inputStringChange}
 						value={this.props.values.data.string_values.edad}
+						min="18"
+						max="100"
 						required={true}
 					/>
 				</div>
@@ -134,9 +131,9 @@ export class FirstPart extends Component {
 				</div>
 				<br />
 
-				<div className="form-group">
-					<label htmlFor="Color">Color favorito:</label>
-					<div className="color form-design">
+				<div className="form-group form-design">
+					<label htmlFor="color">Color favorito:</label>
+					<div className="radio">
 						<RadioGroup
 							aria-label="color"
 							name="color"
@@ -144,24 +141,64 @@ export class FirstPart extends Component {
 							value={this.props.values.data.string_values.color}
 							onChange={this.props.inputStringChange}
 						>
-							<FormControlLabel value="1" control={<Radio />} label="Rojo" />
-							<FormControlLabel value="2" control={<Radio />} label="Azul" />
 							<FormControlLabel
+								type="number"
+								value="1"
+								control={<Radio />}
+								label="Rojo"
+							/>
+							<FormControlLabel
+								type="number"
+								value="2"
+								control={<Radio />}
+								label="Azul"
+							/>
+							<FormControlLabel
+								type="number"
 								value="3"
 								control={<Radio />}
 								label="Amarillo"
 							/>
-							<FormControlLabel value="4" control={<Radio />} label="Verde" />
-							<FormControlLabel value="5" control={<Radio />} label="Morado" />
-							<FormControlLabel value="6" control={<Radio />} label="Marrón" />
-							<FormControlLabel value="7" control={<Radio />} label="Rosa" />
-							<FormControlLabel value="8" control={<Radio />} label="Naranja" />
-							<FormControlLabel value="9" control={<Radio />} label="Otro" />
+							<FormControlLabel
+								type="number"
+								value="4"
+								control={<Radio />}
+								label="Verde"
+							/>
+							<FormControlLabel
+								type="number"
+								value="5"
+								control={<Radio />}
+								label="Morado"
+							/>
+							<FormControlLabel
+								type="number"
+								value="6"
+								control={<Radio />}
+								label="Marrón"
+							/>
+							<FormControlLabel
+								type="number"
+								value="7"
+								control={<Radio />}
+								label="Rosa"
+							/>
+							<FormControlLabel
+								type="number"
+								value="8"
+								control={<Radio />}
+								label="Naranja"
+							/>
+							<FormControlLabel
+								type="number"
+								value="9"
+								control={<Radio />}
+								label="Otro"
+							/>
 						</RadioGroup>
 					</div>
 				</div>
 				<br />
-
 				<div className="form-group">
 					<label htmlFor="comuna">
 						Comuna en la que vive: (Digite solo el numero, sin letras)

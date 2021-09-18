@@ -1,11 +1,20 @@
 import React, { Component } from "react";
 import "./ComponentStyles/Badge.css";
+
+import { withRouter } from "react-router-dom";
 import Swal from "sweetalert2";
 import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 
-export class EigthPart extends Component {
+class EigthPart extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			disableButton: false,
+		};
+	}
+
 	back = (e) => {
 		e.preventDefault();
 		this.props.prevStep();
@@ -33,6 +42,15 @@ export class EigthPart extends Component {
 			errorsString: "",
 		};
 		values.forEach((element, index) => {
+			if (keys[index] === "edad" && element * 1 <= 16) {
+				flag = {
+					sent: false,
+					errorsString: flag.errorsString.concat(
+						" ",
+						"debes ser mayor de 16 años!"
+					),
+				};
+			}
 			if (element === "") {
 				flag = {
 					sent: false,
@@ -57,21 +75,41 @@ export class EigthPart extends Component {
 			stringValues
 		);
 		if (sentString && sentArray) {
-			this.props.saveInfo();
-			Swal.fire({
-				position: "top",
-				icon: "success",
-				title: "Su información ha sido enviada",
-				text: "Gracias por participar!",
-			});
+			try {
+				const res = this.props.saveInfo();
+				res
+					.then((res) => {
+						this.setState({ disableButton: true });
+						console.log(res);
+						Swal.fire({
+							position: "top",
+							icon: "success",
+							title: "Su información ha sido enviada",
+							text: "Gracias por participar!",
+						});
+						this.props.history.push("/");
+					})
+					.catch((e) => {
+						this.setState({ disableButton: false });
+						Swal.fire({
+							position: "top",
+							icon: "error",
+							title: "Ups!, parece que hubo un error en el servidor :(",
+							text: "Vuelve a intentarlo, si el error persiste infórmanos",
+						});
+						return this.props.history.push("/");
+					});
+			} catch (e) {
+				console.log("catch aquiii");
+			}
 			console.log(this.props.values);
 		} else {
 			Swal.fire({
 				position: "top",
 				icon: "error",
 				title: "Ups!, parece que hubo un error ",
-				text: `Parece que no llenaste las siguientes preguntas: ${errorsString} ${errorsArray}, 
-			por favor retrocede y respóndelas :)`,
+				text: `Parece que no llenaste o pusiste información errada las siguientes preguntas: ${errorsString} ${errorsArray}, 
+			por favor retrocede y respóndelas o cámbialas :)`,
 			});
 		}
 	};
@@ -296,8 +334,12 @@ export class EigthPart extends Component {
 						</button>
 					</div>
 					<div className="col-6 text-right">
-						<button className="btn btn-warning" onClick={this.props.saveInfo}>
-							Submit
+						<button
+							className="btn btn-warning"
+							onClick={this.submitInfo}
+							disabled={this.state.disableButton}
+						>
+							Enviar respuestas.
 						</button>
 					</div>
 				</div>
@@ -306,4 +348,4 @@ export class EigthPart extends Component {
 	}
 }
 
-export default EigthPart;
+export default withRouter(EigthPart);

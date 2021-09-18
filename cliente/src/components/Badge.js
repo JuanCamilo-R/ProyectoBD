@@ -25,7 +25,7 @@ class Badge extends React.Component {
 					<div className="text-center">
 						<Link to="/form">
 							<Button className="main__form-button" variant="outline-warning">
-								Llena el form, rey
+								Llenar el formulario.
 							</Button>
 						</Link>
 					</div>
